@@ -3,6 +3,11 @@ RistoranteTeam5
 Menù
 
 PRIMI PIATTI
+Carbonara 12€
+Pappardelle al ragù di cinghiale 13.50€
+Trofie al pesto 13.50€
+Penne all'arrabbiata 11€
+Risotto alla crema di scampi 16€
 
 SECONDI PIATTI
 
