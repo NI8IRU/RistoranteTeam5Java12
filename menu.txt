@@ -2,5 +2,17 @@ RistoranteTeam5
 
 Menù
 
+PRIMI PIATTI
+
+SECONDI PIATTI
+
+PIZZE
+
+DOLCI
+
 BEVANDE
-Acqua Gassata 4$
+Acqua Gassata 2€
+Coca Cola 4€
+Birra 3€
+Vino 10€
+Amaro 3€
