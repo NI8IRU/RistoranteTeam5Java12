@@ -20,6 +20,14 @@ Fritto misto di verdure in pastella 8,00
 
 PIZZE
 
+Margherita 4€
+Marinara 3.50€
+Diavola 5€
+Capricciosa 5€
+Quattro formaggi 6€
+Scamorza e speck 7€
+Pizza kebab 7€
+
 DOLCI
 
 BEVANDE
