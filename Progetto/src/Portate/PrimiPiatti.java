@@ -1,10 +1,10 @@
 package Portate;
 
-public class primiPiatti {
+public class PrimiPiatti {
     private String nome = null;
     private Double prezzo = null;
 
-    primiPiatti(String nome, Double prezzo) {
+    PrimiPiatti(String nome, Double prezzo) {
         this.nome = nome;
         this.prezzo = prezzo;
     }

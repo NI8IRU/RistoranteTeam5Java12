@@ -6,11 +6,11 @@ public class Bevande {
     private Double prezzo = null;
     private Double percentAlcol = 0.0;
 
-    Bevande(String nome, Double prezzo) {
+    public Bevande(String nome, Double prezzo) {
         this.nome = nome;
         this.prezzo = prezzo;
     }
-    Bevande(String nome, Double prezzo, Double percentAlcol) {
+    public Bevande(String nome, Double prezzo, Double percentAlcol) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.percentAlcol = percentAlcol;
@@ -35,4 +35,9 @@ public class Bevande {
     public Double getPercentAlcol() {
         return percentAlcol;
     }
+
+    public String toString() {
+        return nome + " " + prezzo + "€";
+    }
 }
+
