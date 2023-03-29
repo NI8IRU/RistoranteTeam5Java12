@@ -1,5 +1,6 @@
 import Portate.Bevande;
 import Portate.Dolci;
+import Portate.SecondiPiatti;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,6 +10,22 @@ public class Main {
 //Inserire portate
         System.out.println(" ");
         System.out.println("SECONDI PIATTI");
+
+        SecondiPiatti involtini = new SecondiPiatti("Involtini di Verza ripieni di manzo",12.00f);
+        SecondiPiatti angus = new SecondiPiatti("Filetto di angus in crosta di sfoglia",14.00f);
+        SecondiPiatti polpette = new SecondiPiatti("Polpette al sugo",10.00f);
+        SecondiPiatti maiale = new SecondiPiatti("Filetto di maiale al forno con salvia e patate",14.00f);
+        SecondiPiatti pollo = new SecondiPiatti("Pollo alla cacciatora",13.00f);
+
+        System.out.println(
+                involtini + "\n"
+                        + angus + "\n"
+                        + polpette + "\n"
+                        + maiale + "\n"
+                        + pollo
+        );
+
+
 //Inserire portate
         System.out.println(" ");
         System.out.println("PIZZE");
