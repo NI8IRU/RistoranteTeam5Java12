@@ -1,10 +1,10 @@
 import Portate.Bevande;
 import Portate.Dolci;
 import Portate.SecondiPiatti;
+import Portate.Pizze;
 
 public class Main {
     public static void main(String[] args) {
-
         System.out.println("Menù\n");
         System.out.println("PRIMI PIATTI");
 //Inserire portate
@@ -29,6 +29,20 @@ public class Main {
 //Inserire portate
         System.out.println(" ");
         System.out.println("PIZZE");
+
+        Pizze margherita = new Pizze("Margherita", 4);
+        Pizze marinara = new Pizze("Marinara", 3.5);
+        Pizze diavola = new Pizze("Diavola", 5);
+        Pizze capricciosa = new Pizze("Capricciosa", 5);
+        Pizze quattroFormaggi = new Pizze("Quattro Formaggi", 6);
+        Pizze scamorzaESpeck = new Pizze("Scamorza e Speck", 7);
+        Pizze pizzaKebab = new Pizze("Pizza Kebab", 7);
+
+        System.out.println( margherita + "\n" + marinara + "\n" + diavola + "\n"
+                + capricciosa + "\n" + quattroFormaggi + "\n" + scamorzaESpeck + "\n" + pizzaKebab
+        );
+
+
 //Inserire portate
         System.out.println(" ");
         System.out.println("DOLCI");
