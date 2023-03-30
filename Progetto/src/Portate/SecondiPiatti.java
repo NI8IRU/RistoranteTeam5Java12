@@ -24,10 +24,7 @@ public class SecondiPiatti {
 
     @Override
     public String toString() {
-        return "SecondiPiatti{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+        return name + " " + price + "€";
     }
 }
 
