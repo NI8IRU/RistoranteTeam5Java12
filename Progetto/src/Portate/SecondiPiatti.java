@@ -21,4 +21,13 @@ public class SecondiPiatti {
     public void setPrezzo(Float prezzo) {
         this.price = prezzo;
     }
+
+    @Override
+    public String toString() {
+        return "SecondiPiatti{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
+
