@@ -7,7 +7,16 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Menù\n");
         System.out.println("PRIMI PIATTI");
-//Inserire portate
+
+        PrimiPiatti carbonara = new Primipiatti("Carbonara", 12.00);
+        PrimiPiatti pappardelle = new PrimiPiatti("Pappardelle al ragù di cinghiale", 13.50);
+        PrimiPiatti trofie = new PrimiPiatti("Trofie al pesto", 13.50);
+        PrimiPiatti penne = new PrimiPiatti("Penne all'arrabbiata", 11.00);
+        PrimiPiatti risotto = new PrimiPiatti("Risotto alla crema di scampi", 16.00);
+
+        System.out.println( carbonara + "\n" + pappardelle + "\n" + trofie +
+                            "\n" + penne + "\n" + risotto);
+
         System.out.println(" ");
         System.out.println("SECONDI PIATTI");
 

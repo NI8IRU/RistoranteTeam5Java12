@@ -4,7 +4,7 @@ public class PrimiPiatti {
     private String nome = null;
     private Double prezzo = null;
 
-    PrimiPiatti(String nome, Double prezzo) {
+    public PrimiPiatti(String nome, Double prezzo) {
         this.nome = nome;
         this.prezzo = prezzo;
     }
@@ -21,6 +21,10 @@ public class PrimiPiatti {
     }
     public void setPrezzo(Double prezzo) {
         this.prezzo = prezzo;
+    }
+
+    public String toString() {
+        return nome + " " + prezzo + " €";
     }
 
 }
