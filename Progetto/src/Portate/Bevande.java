@@ -10,6 +10,7 @@ public class Bevande {
         this.nome = nome;
         this.prezzo = prezzo;
     }
+
     public Bevande(String nome, Double prezzo, Double percentAlcol) {
         this.nome = nome;
         this.prezzo = prezzo;
@@ -19,9 +20,11 @@ public class Bevande {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public void setPrezzo(Double prezzo) {
         this.prezzo = prezzo;
     }
+
     public void setPercentAlcol(Double percentAlcol) {
         this.percentAlcol = percentAlcol;
     }
@@ -29,9 +32,11 @@ public class Bevande {
     public String getNome() {
         return nome;
     }
+
     public Double getPrezzo() {
         return prezzo;
     }
+
     public Double getPercentAlcol() {
         return percentAlcol;
     }
