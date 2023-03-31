@@ -2,6 +2,7 @@ package Portate;
 
 public class Dolci {
 
+    //TODO ci mettiamo qualche campo per fare qualche funzionalità, tipo quantità di zucchero
     private String nome;
     private Double prezzo;
 

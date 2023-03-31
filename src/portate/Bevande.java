@@ -2,14 +2,12 @@ package Portate;
 
 public class Bevande {
 
-    private String nome = null;
-    private Double prezzo = null;
+    //TODO perchè hai inizializzato a null?
+
+    private String nome;
+    private Double prezzo;
     private Double percentAlcol = 0.0;
 
-    public Bevande(String nome, Double prezzo) {
-        this.nome = nome;
-        this.prezzo = prezzo;
-    }
 
     public Bevande(String nome, Double prezzo, Double percentAlcol) {
         this.nome = nome;
@@ -41,7 +39,9 @@ public class Bevande {
         return percentAlcol;
     }
 
+    //TODO a che serve il toString? a stampare ?dobbiamo creare print che dentro ha una system.out
     public String toString() {
+
         return nome + " " + prezzo + "€";
     }
 }

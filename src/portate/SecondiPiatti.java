@@ -2,6 +2,7 @@ package Portate;
 
 public class SecondiPiatti {
     private String name = null;
+   //TODO da fare double
     private Float price = null;
 
     public SecondiPiatti(String nome, Float prezzo) {

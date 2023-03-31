@@ -75,8 +75,8 @@ public class Main {
 //Inserire portate
         System.out.println(" ");
         System.out.println("BEVANDE");
-        Bevande acquaGassata = new Bevande("Acqua Gassata", 1.99);
-        Bevande cocaCola = new Bevande("Coca Cola", 3.99);
+        Bevande acquaGassata = new Bevande("Acqua Gassata", 1.99,0.0);
+        Bevande cocaCola = new Bevande("Coca Cola", 3.99,0.0);
         Bevande birra = new Bevande("Birra", 2.99, 4.9);
         Bevande vino = new Bevande("Vino", 10.00, 12.8);
         Bevande amaro = new Bevande("Amaro", 2.99, 20.00);
