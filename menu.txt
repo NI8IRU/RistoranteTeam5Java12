@@ -1,43 +1,47 @@
-RistoranteTeam5
-
 Menù
 
 PRIMI PIATTI
- Carbonara 12€
- Pappardelle al ragù di cinghiale 13.50€
- Trofie al pesto 13.50€
- Penne all'arrabbiata 11€
- Risotto alla crema di scampi 16€
+Carbonara 12€
+Pappardelle al ragù di cinghiale 13.50€
+Trofie al pesto 13.50€
+Penne all'arrabbiata 11€
+Risotto alla crema di scampi 16€
 
 SECONDI PIATTI
- Involtini di Verza ripieni di manzo 12,00
- Filetto di angus in crosta di sfoglia 14,00
- Polpette al sugo 10,00
- Filetto di maiale al forno con salvia e patate 14,00
- Pollo alla cacciatora 13,00
+Involtini di Verza ripieni di manzo 12,00€
+Filetto di angus in crosta di sfoglia 14,00€
+Polpette al sugo 10,00€
+Filetto di maiale al forno con salvia e patate 14,00€
+Pollo alla cacciatora 13,00€
 
 PIZZE
- Margherita 4€
- Marinara 3.50€
- Diavola 5€
- Capricciosa 5€
- Quattro formaggi 6€
- Scamorza e speck 7€
- Pizza kebab 7€
+Margherita 4€
+Marinara 3.50€
+Diavola 5€
+Capricciosa 5€
+Quattro formaggi 6€
+Scamorza e speck 7€
+Pizza kebab 7€
 
 DOLCI
- Mousse ai frutti di bosco 3.50€
- Soufflé di mango con crema di cocco e lime 3.70€
- Tiramisù 3.99€
- Torta di mele 6.69€
- Tortino al cioccolato 3.40€
- Delizia al limone 4.80€
---Novità --
- Cheesecake ai kinder cereali 5.65€
+Mousse ai frutti di bosco 3.50€
+Soufflé di mango con crema di cocco e lime 3.70€
+Tiramisù 3.99€
+Torta di mele 6.69€
+Tortino al cioccolato 3.40€
+Delizia al limone 4.80€
+Cheesecake ai kinder cereali 5.65€
 
 BEVANDE
- Acqua Gassata 2€
- Coca Cola 4€
- Birra 3€
- Vino 10€
- Amaro 3€
+Acqua Gassata 2€
+Coca Cola 4€
+Birra 3€
+Vino 10€
+Amaro 3€
+
+#TODO
+Tutte le variabili prezzo di tipo Double
+funzione che stampa gli oggetti nella classe (No toString)
+Formattazione uguale a quella del menù
+Nelle classi, variabili non inizializzate
+Aggiungere un array list nella classe per contenere gli ingredienti

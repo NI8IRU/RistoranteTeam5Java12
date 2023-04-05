@@ -1,4 +1,4 @@
-package Portate;
+package portate;
 
 public class Bevande {
 
@@ -39,10 +39,5 @@ public class Bevande {
         return percentAlcol;
     }
 
-    //TODO a che serve il toString? a stampare ?dobbiamo creare print che dentro ha una system.out
-    public String toString() {
-
-        return nome + " " + prezzo + "€";
-    }
 }
 

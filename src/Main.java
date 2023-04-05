@@ -1,8 +1,8 @@
-import Portate.Bevande;
-import Portate.Dolci;
-import Portate.SecondiPiatti;
-import Portate.Pizze;
-import Portate.PrimiPiatti;
+import portate.Bevande;
+import portate.Dolci;
+import portate.SecondiPiatti;
+import portate.Pizze;
+import portate.PrimiPiatti;
 
 public class Main {
     public static void main(String[] args) {
