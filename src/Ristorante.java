@@ -7,9 +7,17 @@ public class Ristorante {
         this.tipo = tipo;
     }
 
-    public static void stampaMenu() {
-        System.out.println("MENÙ");
+    public static void printMenu() {
+        System.out.println("MENÙ\n");
+        System.out.println("PRIMI PIATTI\n");
 
+        System.out.println("SECONDI PIATTI\n");
+
+        System.out.println("PIZZE\n");
+
+        System.out.println("DOLCI\n");
+
+        System.out.println("BEVANDE\n");
     }
 
     public String getNome() {
