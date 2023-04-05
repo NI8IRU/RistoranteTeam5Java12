@@ -1,5 +1,6 @@
 import portate.Bevande;
 import portate.Dolci;
+import portate.SecondiPiatti;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +12,11 @@ public class Ristorante {
     //Primi Piatti
 
     //Secondi Piatti
-
+    private static final SecondiPiatti involtini = new SecondiPiatti("Involtini di Verza ripieni di manzo", 12.00,100);
+    private static final SecondiPiatti angus = new SecondiPiatti("Filetto di angus in crosta di sfoglia", 14.00,140);
+    private static final SecondiPiatti polpette = new SecondiPiatti("Polpette al sugo", 10.00,135);
+    private static final SecondiPiatti maiale = new SecondiPiatti("Filetto di maiale al forno con salvia e patate", 14.00,130);
+    private static final SecondiPiatti pollo = new SecondiPiatti("Pollo alla cacciatora", 13.00,130);
     //Pizze
 
     //Dolci
@@ -40,6 +45,11 @@ public class Ristorante {
         System.out.println("\nPRIMI PIATTI");
 
         System.out.println("\nSECONDI PIATTI");
+        List<SecondiPiatti> Secondi =Arrays.asList(involtini,angus,polpette,maiale,pollo);
+        for(SecondiPiatti i : Secondi){
+            i.printSecondiPiatti();
+
+        }
 
         System.out.println("\nPIZZE");
 

@@ -21,11 +21,11 @@ public class Main {
         System.out.println(" ");
         System.out.println("SECONDI PIATTI");
 
-        SecondiPiatti involtini = new SecondiPiatti("Involtini di Verza ripieni di manzo", 12.00f);
-        SecondiPiatti angus = new SecondiPiatti("Filetto di angus in crosta di sfoglia", 14.00f);
-        SecondiPiatti polpette = new SecondiPiatti("Polpette al sugo", 10.00f);
-        SecondiPiatti maiale = new SecondiPiatti("Filetto di maiale al forno con salvia e patate", 14.00f);
-        SecondiPiatti pollo = new SecondiPiatti("Pollo alla cacciatora", 13.00f);
+        SecondiPiatti involtini = new SecondiPiatti("Involtini di Verza ripieni di manzo", 12.00,100);
+        SecondiPiatti angus = new SecondiPiatti("Filetto di angus in crosta di sfoglia", 14.00,140);
+        SecondiPiatti polpette = new SecondiPiatti("Polpette al sugo", 10.00,135);
+        SecondiPiatti maiale = new SecondiPiatti("Filetto di maiale al forno con salvia e patate", 14.00,130);
+        SecondiPiatti pollo = new SecondiPiatti("Pollo alla cacciatora", 13.00,130);
 
         System.out.println(
                 involtini + "\n"

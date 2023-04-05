@@ -1,31 +1,41 @@
 package portate;
 
 public class SecondiPiatti {
-    private String name = null;
-   //TODO da fare double
-    private Float price = null;
+    private String nome;
 
-    public SecondiPiatti(String nome, Float prezzo) {
-        this.name = nome;
-        this.price = prezzo;
+    private Double prezzo;
+    private Double pesoCarne;
+
+
+    public SecondiPiatti(String nome, Double prezzo,Double pesoCarne) {
+        this.nome = nome;
+        this.prezzo = prezzo;
+        this.pesoCarne=pesoCarne;
     }
     public String getNome() {
-        return name;
+        return nome;
     }
-    public Float getPrezzo() {
-        return price;
+    public Double getPrezzo() {
+        return prezzo;
+    }
+
+    public Double getPesoCarne() {
+        return pesoCarne;
     }
 
     public void setNome(String nome) {
-        this.name = nome;
+        this.nome = nome;
     }
-    public void setPrezzo(Float prezzo) {
-        this.price = prezzo;
+    public void setPrezzo(Double prezzo) {
+        this.prezzo = prezzo;
+    }
+    public void setPesoCarne(Double pesoCarne){
+        this.pesoCarne=pesoCarne;
     }
 
-    @Override
-    public String toString() {
-        return name + " " + price + "€";
+    public void printSecondi() {
+        System.out.println(nome + ": " + prezzo + "€" +pesoCarne +"g");
     }
+
 }
 
