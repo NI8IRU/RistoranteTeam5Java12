@@ -12,19 +12,17 @@ public class PrimiPiatti {
     public String getNome() {
         return nome;
     }
-    public Double getPrezzo() {
-        return prezzo;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    public Double getPrezzo() {
+        return prezzo;
     }
     public void setPrezzo(Double prezzo) {
         this.prezzo = prezzo;
     }
 
-    public String toString() {
-        return nome + " " + prezzo + " €";
+    public void printPrimiPiatti() {
+        System.out.println(nome + " " + prezzo + "€");
     }
-
 }
