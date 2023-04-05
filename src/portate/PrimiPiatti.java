@@ -1,4 +1,4 @@
-package Portate;
+package portate;
 
 public class PrimiPiatti {
     private String nome = null;
