@@ -88,5 +88,6 @@ public class Main {
                         + amaro
         );
         System.out.println(" ");
+        Ristorante.printMenu();
     }
 }
