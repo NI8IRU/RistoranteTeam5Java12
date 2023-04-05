@@ -1,4 +1,5 @@
 import portate.Bevande;
+import portate.Dolci;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,6 +15,13 @@ public class Ristorante {
     //Pizze
 
     //Dolci
+    private static final Dolci mousse = new Dolci("Mousse ai frutti di bosco", 3.50, "15g");
+    private static final Dolci souffle = new Dolci("Soufflé di mango con crema di cocco e lime", 3.70, "1.9g");
+    private static final Dolci tiramisu = new Dolci("Tiramisù", 3.99, "15g");
+    private static final Dolci torta = new Dolci("Torta di mele ", 6.69, "17g");
+    private static final Dolci tortino = new Dolci("Tortino al cioccolato ", 3.40, "40g");
+    private static final Dolci delizia = new Dolci("Delizia al limone", 4.80, "50g");
+    private static final Dolci novita = new Dolci("Cheesecake ai kinder cereali ", 5.65, "94g");
 
     //Bevande
     private static final Bevande acquaGassata = new Bevande("Acqua Gassata", 1.99,0.0);
@@ -36,6 +44,11 @@ public class Ristorante {
         System.out.println("\nPIZZE");
 
         System.out.println("\nDOLCI");
+        List<Dolci> dolci = Arrays.asList(mousse, souffle, tiramisu, torta, tortino, delizia, novita);
+        for(Dolci portateDolci : dolci){
+            portateDolci.printDolci();
+        }
+
 
         System.out.println("\nBEVANDE");
         List<Bevande> bevande = Arrays.asList(acquaGassata, cocaCola, birra, vino, amaro);
