@@ -1,8 +1,8 @@
 package Portate;
 
 public class PrimiPiatti {
-    private String nome = null;
-    private Double prezzo = null;
+    private String nome;
+    private Double prezzo;
 
     public PrimiPiatti(String nome, Double prezzo) {
         this.nome = nome;
