@@ -45,7 +45,8 @@ public class Dolci {
 
 
     public void printDolci(){
-        System.out.println(nome + ": " + prezzo + "€");
+        System.out.println(nome + ": " + prezzo + "€"
+                + "\n" + quantitaZuccheri);
 
     }
 }
