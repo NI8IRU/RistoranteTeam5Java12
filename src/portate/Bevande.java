@@ -38,6 +38,9 @@ public class Bevande {
     public Double getPercentAlcol() {
         return percentAlcol;
     }
+    public void printBevande() {
+        System.out.println(nome + ": " + prezzo + "€");
+    }
 
 }
 

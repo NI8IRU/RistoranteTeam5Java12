@@ -6,11 +6,14 @@ public class Dolci {
     private String nome;
     private Double prezzo;
 
+    private  String quantitaZuccheri;
+
     //costruttore
 
-    public Dolci(String nome, Double prezzo){
+    public Dolci(String nome, Double prezzo, String quantitaZuccheri){
         this.nome = nome;
         this.prezzo = prezzo;
+        this.quantitaZuccheri = quantitaZuccheri;
     }
 
     //setter e getter x il nome !
@@ -33,8 +36,17 @@ public class Dolci {
         return this.prezzo;
     }
 
-    @Override
-    public String toString() {
-        return nome + " - "  + prezzo + " €";
+
+    public void setQuantitaZuccheri(String quantitaZuccheri) {
+        this.quantitaZuccheri = quantitaZuccheri;
+    }
+
+
+
+
+    public void printDolci(){
+        System.out.println(nome + ": " + prezzo + "€"
+                + "\n" + quantitaZuccheri);
+
     }
 }
