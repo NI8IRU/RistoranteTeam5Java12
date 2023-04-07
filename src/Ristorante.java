@@ -1,6 +1,7 @@
 import portate.Bevande;
 import portate.Dolci;
 import portate.SecondiPiatti;
+import portate.PrimiPiatti;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,6 +11,11 @@ public class Ristorante {
     private String nome;
     private String tipo;
     //Primi Piatti
+    private static final PrimiPiatti carbonara = new PrimiPiatti("Carbonara", 12.00);
+    private static final PrimiPiatti pappardelle = new PrimiPiatti("Pappardelle al ragù di cinghiale", 13.50);
+    private static final PrimiPiatti trofie = new PrimiPiatti("Trofie al pesto", 13.5);
+    private static final PrimiPiatti penne = new PrimiPiatti("Penne all'arrabbiata", 11.0);
+    private static final PrimiPiatti risotto = new PrimiPiatti("Risotto alla crema di scampi", 16.00);
 
     //Secondi Piatti
     private static final SecondiPiatti involtini = new SecondiPiatti("Involtini di Verza ripieni di manzo", 12.00,100);
@@ -43,6 +49,10 @@ public class Ristorante {
     public static void printMenu() {
         System.out.println("MENÙ");
         System.out.println("\nPRIMI PIATTI");
+        List<PrimiPiatti> primi = Array.aslist(carbonara, pappardelle, trofie, penne, risotto);
+        for(PrimiPiatti portata : primi){
+            portata.printPrimiPiatti();
+        }
 
         System.out.println("\nSECONDI PIATTI");
         List<SecondiPiatti> Secondi =Arrays.asList(involtini,angus,polpette,maiale,pollo);
