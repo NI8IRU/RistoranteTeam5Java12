@@ -2,6 +2,7 @@ import portate.Bevande;
 import portate.Dolci;
 import portate.SecondiPiatti;
 import portate.PrimiPiatti;
+import portate.Pizze;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,6 +25,17 @@ public class Ristorante {
     private static final SecondiPiatti maiale = new SecondiPiatti("Filetto di maiale al forno con salvia e patate", 14.00,130);
     private static final SecondiPiatti pollo = new SecondiPiatti("Pollo alla cacciatora", 13.00,130);
     //Pizze
+
+    private static final Pizze margherita = new Pizze("Margherita", 4, true, true);
+    private static final Pizze marinara = new Pizze("Marinara", 3.5,true, true);
+    private static final Pizze diavola = new Pizze("Diavola", 5,true, true);
+    private static final Pizze capricciosa = new Pizze("Capricciosa", 5,true, true);
+    private static final Pizze quattroFormaggi = new Pizze("Quattro Formaggi", 6,true, true);
+    private static final Pizze scamorzaESpeck = new Pizze("Scamorza e Speck", 7,true, true);
+    private static final Pizze pizzaKebab = new Pizze("Pizza Kebab", 7,true, true);
+    private static final Pizze margheritaSenzaLattosio = new Pizze("Margherita senza Lattosio", 5, true, false);
+    private static final Pizze margheritaSenzaGlutine = new Pizze("Margherita senza Glutine", 5, false, true);
+    private static final Pizze margheritaSenzaGlutineELattosio = new Pizze("Margherita senza Glutine e Lattosio", 6,false,false);
 
     //Dolci
     private static final Dolci mousse = new Dolci("Mousse ai frutti di bosco", 3.50, "15g");
@@ -62,6 +74,12 @@ public class Ristorante {
         }
 
         System.out.println("\nPIZZE");
+        List<Pizze> Pizze = Arrays.asList(margherita, marinara, diavola, capricciosa, quattroFormaggi, scamorzaESpeck,
+                pizzaKebab, margheritaSenzaGlutine, margheritaSenzaLattosio, margheritaSenzaGlutineELattosio);
+        for(Pizze numeroPizze : Pizze){
+            numeroPizze.printPizza();
+        }
+
 
         System.out.println("\nDOLCI");
         List<Dolci> dolci = Arrays.asList(mousse, souffle, tiramisu, torta, tortino, delizia, novita);

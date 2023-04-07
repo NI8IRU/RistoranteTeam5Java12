@@ -22,6 +22,9 @@ Capricciosa 5€
 Quattro formaggi 6€
 Scamorza e speck 7€
 Pizza kebab 7€
+Margherita senza Lattosio 5€
+Margherita senza Glutine 5€
+Margherita senza Glutine e Lattosio 6€
 
 DOLCI
 Mousse ai frutti di bosco 3.50€
