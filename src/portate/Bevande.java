@@ -5,7 +5,9 @@ public class Bevande {
     //TODO perchè hai inizializzato a null?
 
     private String nome;
-    private Double prezzo;
+    private Double prezzo ;
+
+    //TODO
     private Double percentAlcol = 0.0;
 
 

@@ -1,8 +1,4 @@
-import portate.Bevande;
-import portate.Dolci;
-import portate.SecondiPiatti;
-import portate.Pizze;
-import portate.PrimiPiatti;
+import portate.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -61,6 +57,7 @@ public class Main {
         System.out.println(" ");
         System.out.println("DOLCI");
 
+
         Dolci mousse = new Dolci("Mousse ai frutti di bosco", 3.50);
         Dolci souffle = new Dolci("Soufflé di mango con crema di cocco e lime", 3.70);
         Dolci tiramisu = new Dolci("Tiramisù", 3.99);
@@ -92,5 +89,14 @@ public class Main {
                         + amaro
         );
         System.out.println(" ");
+
+        Menu menu = new Menu("cheneso2", "carne");
+
+        menu.addBevanda(amaro);
+        menu.addBevanda(amaro);
+        menu.addBevanda(amaro);
+        menu.addBevanda(amaro);
+        menu.addBevanda(amaro);
+
     }
 }
