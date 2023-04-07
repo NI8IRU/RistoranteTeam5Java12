@@ -1,17 +1,10 @@
 package portate;
 
-public class Bevande {
-
-    //TODO perchè hai inizializzato a null?
-
+public class Bevanda {
     private String nome;
     private Double prezzo ;
-
-    //TODO
-    private Double percentAlcol = 0.0;
-
-
-    public Bevande(String nome, Double prezzo, Double percentAlcol) {
+    private Double percentAlcol;
+    public Bevanda(String nome, Double prezzo, Double percentAlcol) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.percentAlcol = percentAlcol;
