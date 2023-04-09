@@ -4,13 +4,12 @@ import java.util.ArrayList;
 
 public class Menu {
     private String nome;
-    private Integer tipo;
+
 
     private ArrayList<Bevanda> bevande;
 
     public Menu(String nome, Integer tipo) {
         this.nome = nome;
-        this.tipo = tipo;
         this.bevande = new ArrayList<>();
     }
 
@@ -22,14 +21,7 @@ public class Menu {
         this.nome = nome;
     }
 
-    public Integer getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(Integer tipo) {
-        this.tipo = tipo;
-    }
-
+    public ArrayList<Bevanda> getBevande() {return this.bevande;}
 
     public void addBevanda(Bevanda bevande){
         this.bevande.add(bevande);
