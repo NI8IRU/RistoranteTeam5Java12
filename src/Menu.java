@@ -25,31 +25,30 @@ public class Menu {
         this.nome = nome;
     }
 
-    public ArrayList<Bevanda> getBevande() {return this.bevande;}
+    public ArrayList<Bevanda> getBevande() {
+        return this.bevande;
+    }
 
-    public void addBevanda(Bevanda bevande){
+    public void addBevanda(Bevanda bevande) {
         this.bevande.add(bevande);
     }
 
-    public void removeBevanda(Bevanda bevande){
+    public void removeBevanda(Bevanda bevande) {
         this.bevande.remove(bevande);
     }
 
 
-
-
-
-    public void addDolci(Dolce dolci){
+    public void addDolci(Dolce dolci) {
         this.dolci.add(dolci);
     }
 
-    public void removeDolci(Dolce dolci){
+    public void removeDolci(Dolce dolci) {
         this.dolci.remove(dolci);
     }
 
 
     //getter per l'array dolci
-    public ArrayList<Dolce> getDolci(){
+    public ArrayList<Dolce> getDolci() {
         return this.dolci;
     }
 
