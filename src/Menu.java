@@ -8,9 +8,13 @@ public class Menu {
 
     private ArrayList<Bevanda> bevande;
 
+    //array x la classe Dolce
+    private ArrayList<Dolce> dolci;
+
     public Menu(String nome, Integer tipo) {
         this.nome = nome;
         this.bevande = new ArrayList<>();
+        this.dolci = new ArrayList<>();
     }
 
     public String getNome() {
@@ -30,4 +34,23 @@ public class Menu {
     public void removeBevanda(Bevanda bevande){
         this.bevande.remove(bevande);
     }
+
+
+
+
+
+    public void addDolci(Dolce dolci){
+        this.dolci.add(dolci);
+    }
+
+    public void removeDolci(Dolce dolci){
+        this.dolci.remove(dolci);
+    }
+
+
+    //getter per l'array dolci
+    public ArrayList<Dolce> getDolci(){
+        return this.dolci;
+    }
+
 }
