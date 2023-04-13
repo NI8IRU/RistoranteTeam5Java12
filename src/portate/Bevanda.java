@@ -1,6 +1,8 @@
 package portate;
 
 public class Bevanda {
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_RESET = "\033[0m";
     private String nome;
     private Double prezzo ;
     private Double percentAlcol;
@@ -34,7 +36,7 @@ public class Bevanda {
         return percentAlcol;
     }
     public void printBevanda() {
-        System.out.println(nome + ": " + prezzo + "€");
+        System.out.println(ANSI_BLUE + nome + ": " + prezzo + "€" + ANSI_RESET);
     }
 
 }

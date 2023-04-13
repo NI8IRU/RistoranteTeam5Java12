@@ -1,6 +1,8 @@
 package portate;
 
 public class SecondoPiatto {
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_RESET = "\033[0m";
     private String nome;
 
     private Double prezzo;
@@ -34,7 +36,7 @@ public class SecondoPiatto {
     }
 
     public void printSecondi() {
-        System.out.println(nome + ": " + prezzo + "€");
+        System.out.println(ANSI_YELLOW + nome + ": " + prezzo + "€" + ANSI_RESET);
     }
 
 }

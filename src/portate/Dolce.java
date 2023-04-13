@@ -2,8 +2,9 @@ package portate;
 
 //cambiato nome- messo al singolare!
 public class Dolce {
+    public static final String PURPLE = "\033[0;35m";
+    public static final String ANSI_RESET = "\033[0m";
 
-    //TODO ci mettiamo qualche campo per fare qualche funzionalità, tipo quantità di zucchero
     private String nome;
     private Double prezzo;
 
@@ -48,7 +49,7 @@ public class Dolce {
     }
 
     public void printDolci() {
-        System.out.println(nome + ": " + prezzo + "€");
+        System.out.println(PURPLE + nome + ": " + prezzo + "€" + ANSI_RESET);
 
     }
 }
