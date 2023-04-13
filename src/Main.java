@@ -7,10 +7,15 @@ public class Main {
 
         //Sezione Secondi
         SecondoPiatto involtini = new SecondoPiatto("Involtini di Verza ripieni di manzo",12.00,125.00);
+        menu.addSecondo(involtini);
         SecondoPiatto angus = new SecondoPiatto("Filetto di angus in crosta di sfoglia",14.00,150.00);
+        menu.addSecondo(angus);
         SecondoPiatto polpette = new SecondoPiatto("Polpette al sugo",10.00,139.00);
+        menu.addSecondo(polpette);
         SecondoPiatto maiale = new SecondoPiatto("Filetto di maiale al forno con salvia e patate",14.00,150.00);
+        menu.addSecondo(maiale);
         SecondoPiatto pollo = new SecondoPiatto("Pollo alla cacciatora",13.00,130.00);
+        menu.addSecondo(pollo);
 
         System.out.println("\nSecondi Piatti");
         for (SecondoPiatto secondo : menu.getSecondi()) {
