@@ -1,13 +1,13 @@
 package portate;
 
-public class SecondiPiatti {
+public class SecondoPiatto {
     private String nome;
 
     private Double prezzo;
     private Double pesoCarne;
 
 
-    public SecondiPiatti(String nome, Double prezzo,Double pesoCarne) {
+    public SecondoPiatto(String nome, Double prezzo,Double pesoCarne) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.pesoCarne=pesoCarne;
@@ -34,7 +34,7 @@ public class SecondiPiatti {
     }
 
     public void printSecondi() {
-        System.out.println(nome + ": " + prezzo + "€" +pesoCarne +"g");
+        System.out.println(nome + ": " + prezzo + "€");
     }
 
 }

@@ -4,6 +4,19 @@ public class Main {
     public static void main(String[] args) {
         Menu menu = new Menu("Ristorante", 1);
 
+
+        //Sezione Secondi
+        SecondoPiatto involtini = new SecondoPiatto("Involtini di Verza ripieni di manzo",12.00,125.00);
+        SecondoPiatto angus = new SecondoPiatto("Filetto di angus in crosta di sfoglia",14.00,150.00);
+        SecondoPiatto polpette = new SecondoPiatto("Polpette al sugo",10.00,139.00);
+        SecondoPiatto maiale = new SecondoPiatto("Filetto di maiale al forno con salvia e patate",14.00,150.00);
+        SecondoPiatto pollo = new SecondoPiatto("Pollo alla cacciatora",13.00,130.00);
+
+        System.out.println("\nSecondi Piatti");
+        for (SecondoPiatto secondo : menu.getSecondi()) {
+            secondo.printSecondi();
+        }
+
         //Sezione Dolci
         Dolce mousse = new Dolce("Mousse ai frutti di bosco", 3.50, "15g");
         menu.addDolci(mousse);
