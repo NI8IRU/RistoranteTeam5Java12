@@ -1,6 +1,8 @@
 package portate;
 
 public class Bevanda {
+
+    //TODO deve diventare un enumerato con una descrizione che dici che fa, (quindi valore e descrizione)
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_RESET = "\033[0m";
     private String nome;

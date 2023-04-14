@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Menu {
     private String nome;
-    private TipoRistorante tipoRistorante;
+    private TipoEnum tipoRistorante;
 
     private ArrayList<Bevanda> bevande;
 
@@ -15,8 +15,12 @@ public class Menu {
     //array x la classe Dolce
     private ArrayList<Dolce> dolci;
 
-    public Menu(String nome, TipoRistorante tipoRistorante) {
+    //TODO inserire prezzo medio a mano o generato,
+    public Menu(String nome, TipoEnum tipoRistorante) {
+        //TODO perchè il tipo rist non viene settato
+        //inseriamo altri field?
         this.nome = nome;
+        //TODO fare uan lista unica
         this.bevande = new ArrayList<>();
         this.dolci = new ArrayList<>();
         this.secondi = new ArrayList<>();

@@ -2,7 +2,7 @@ import portate.*;
 
 public class Main {
     public static void main(String[] args) {
-        Menu menu = new Menu("RistoranteTeam5", TipoRistorante.RISTORANTE);
+        Menu menu = new Menu("RistoranteTeam5", TipoEnum.RISTORANTE);
 
         //Sezione Primi
         PrimoPiatto carbonara = new PrimoPiatto("Carbonara", 12.00, 475);
@@ -16,6 +16,7 @@ public class Main {
         PrimoPiatto Risotto = new PrimoPiatto("Risotto alla crema di scampi", 16.00, 453);
         menu.addPrimo(Risotto);
 
+        //TODO inserire nel menù il metodo di stampa
         System.out.println("\nPrimi Piatti");
         for (PrimoPiatto primo : menu.getPrimi()) {
             primo.printPrimi();

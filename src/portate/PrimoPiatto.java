@@ -8,7 +8,7 @@ public class PrimoPiatto {
     private Integer kcalPerEtto;
 
 
-    public SecondoPiatto(String nome, Double prezzo,Integer kcalPerEtto) {
+    public PrimoPiatto(String nome, Double prezzo,Integer kcalPerEtto) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.kcalPerEtto = kcalPerEtto;

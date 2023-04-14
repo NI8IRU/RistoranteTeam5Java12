@@ -8,6 +8,7 @@ public class Dolce {
     private String nome;
     private Double prezzo;
 
+    //TODO magari la possiamo chiamare %zuccheri,decidete voi
     private String quantitaZuccheri;
 
     //costruttore
