@@ -41,10 +41,3 @@ Coca Cola 4€
 Birra 3€
 Vino 10€
 Amaro 3€
-
-#TODO
-Tutte le variabili prezzo di tipo Double
-funzione che stampa gli oggetti nella classe (No toString)
-Formattazione uguale a quella del menù
-Nelle classi, variabili non inizializzate
-Aggiungere un array list nella classe per contenere gli ingredienti
