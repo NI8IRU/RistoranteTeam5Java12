@@ -1,0 +1,9 @@
+-Non utilizzare “static”
+
+-Inizializzare lista nel Menu, popolarla nel main
+
+-Togliere la funzione printMenu, stampare direttamente nel main
+
+-Refactor di tutte le classi al singolare
+
+-Obbiettivi: riuscire a stampare il menu dal main uniformato ( nome: prezzo€ ) ---IMPORTANTE---

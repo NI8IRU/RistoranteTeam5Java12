@@ -1,15 +1,12 @@
 package portate;
 
-public class Bevande {
-
-    //TODO perchè hai inizializzato a null?
-
+public class Bevanda {
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_RESET = "\033[0m";
     private String nome;
-    private Double prezzo;
-    private Double percentAlcol = 0.0;
-
-
-    public Bevande(String nome, Double prezzo, Double percentAlcol) {
+    private Double prezzo ;
+    private Double percentAlcol;
+    public Bevanda(String nome, Double prezzo, Double percentAlcol) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.percentAlcol = percentAlcol;
@@ -38,8 +35,8 @@ public class Bevande {
     public Double getPercentAlcol() {
         return percentAlcol;
     }
-    public void printBevande() {
-        System.out.println(nome + ": " + prezzo + "€");
+    public void printBevanda() {
+        System.out.println(ANSI_BLUE + nome + ": " + prezzo + "€" + ANSI_RESET);
     }
 
 }

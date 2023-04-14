@@ -1,13 +1,15 @@
 package portate;
 
-public class SecondiPiatti {
+public class SecondoPiatto {
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_RESET = "\033[0m";
     private String nome;
 
     private Double prezzo;
     private Double pesoCarne;
 
 
-    public SecondiPiatti(String nome, Double prezzo,Double pesoCarne) {
+    public SecondoPiatto(String nome, Double prezzo,Double pesoCarne) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.pesoCarne=pesoCarne;
@@ -34,7 +36,7 @@ public class SecondiPiatti {
     }
 
     public void printSecondi() {
-        System.out.println(nome + ": " + prezzo + "€" +pesoCarne +"g");
+        System.out.println(ANSI_YELLOW + nome + ": " + prezzo + "€" + ANSI_RESET);
     }
 
 }
