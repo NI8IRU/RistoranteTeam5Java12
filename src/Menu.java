@@ -10,6 +10,8 @@ public class Menu {
 
     private ArrayList<SecondoPiatto> secondi;
 
+    private ArrayList<PrimoPiatto> primi;
+
     //array x la classe Dolce
     private ArrayList<Dolce> dolci;
 
@@ -18,6 +20,7 @@ public class Menu {
         this.bevande = new ArrayList<>();
         this.dolci = new ArrayList<>();
         this.secondi = new ArrayList<>();
+        this.primi = new ArrayList<>();
     }
 
     public String getNome() {
@@ -60,5 +63,10 @@ public class Menu {
         return this.dolci;
     }
 
+    public ArrayList<PrimoPiatto> getPrimi() {
+        return this.primi;
+    }
+    public void addPrimo(PrimoPiatto primi){this.primi.add(primi);}
+    public void removePrimo(PrimoPiatto primi){this.primi.remove(primi);}
 
 }

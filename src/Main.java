@@ -4,6 +4,22 @@ public class Main {
     public static void main(String[] args) {
         Menu menu = new Menu("RistoranteTeam5", TipoRistorante.RISTORANTE);
 
+        //Sezione Primi
+        PrimoPiatto carbonara = new PrimoPiatto("Carbonara", 12.00, 475);
+        menu.addPrimo(carbonara);
+        PrimoPiatto pappardelle = new PrimoPiatto("Pappardelle al ragù di cinghiale", 13.50, 429);
+        menu.addPrimo(pappardelle);
+        PrimoPiatto trofie = new PrimoPiatto("Trofie al pesto", 13.50, 395);
+        menu.addPrimo(trofie);
+        PrimoPiatto penne = new PrimoPiatto("Penne all'arrabbiata", 11.00, 307);
+        menu.addPrimo(penne);
+        PrimoPiatto Risotto = new PrimoPiatto("Risotto alla crema di scampi", 16.00, 453);
+        menu.addPrimo(Risotto);
+
+        System.out.println("\nPrimi Piatti");
+        for (PrimoPiatto primo : menu.getPrimi()) {
+            primo.printPrimi();
+        }
 
         //Sezione Secondi
         SecondoPiatto involtini = new SecondoPiatto("Involtini di Verza ripieni di manzo",12.00,125.00);
