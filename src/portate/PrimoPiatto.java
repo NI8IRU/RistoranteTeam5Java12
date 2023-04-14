@@ -1,6 +1,6 @@
 package portate;
 
-public class PrimiPiatti {
+public class PrimoPiatto {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_RESET = "\033[0m";
     private String nome;
