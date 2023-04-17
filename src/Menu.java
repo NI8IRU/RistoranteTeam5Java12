@@ -1,30 +1,25 @@
-import portate.*;
+import classiPadreEdEnum.ColorEnum;
+import classiPadreEdEnum.Portata;
+import classiPadreEdEnum.TipoRistoranteEnum;
+import portate.Bevanda;
+import portate.Dolce;
+import portate.PrimoPiatto;
+import portate.SecondoPiatto;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class Menu {
     private String nome;
-    private TipoEnum tipoRistorante;
+    private TipoRistoranteEnum tipo;
+    private Double prezzo = 0.0;
+    private List<Portata> portate;
 
-    private ArrayList<Bevanda> bevande;
-
-    private ArrayList<SecondoPiatto> secondi;
-
-    private ArrayList<PrimoPiatto> primi;
-
-    //array x la classe Dolce
-    private ArrayList<Dolce> dolci;
-
-    //TODO inserire prezzo medio a mano o generato,
-    public Menu(String nome, TipoEnum tipoRistorante) {
-        //TODO perchè il tipo rist non viene settato
-        //inseriamo altri field?
+    public Menu(String nome, TipoRistoranteEnum tipo) {
         this.nome = nome;
-        //TODO fare uan lista unica
-        this.bevande = new ArrayList<>();
-        this.dolci = new ArrayList<>();
-        this.secondi = new ArrayList<>();
-        this.primi = new ArrayList<>();
+        this.tipo = tipo;
+        portate = new ArrayList<>();
     }
 
     public String getNome() {
@@ -35,42 +30,79 @@ public class Menu {
         this.nome = nome;
     }
 
-    public ArrayList<Bevanda> getBevande() {
-        return this.bevande;
+    public TipoRistoranteEnum getTipo() {
+        return tipo;
     }
 
-    public void addBevanda(Bevanda bevande) {
-        this.bevande.add(bevande);
+    public void setTipo(TipoRistoranteEnum tipo) {
+        this.tipo = tipo;
     }
 
-    public void removeBevanda(Bevanda bevande) {
-        this.bevande.remove(bevande);
+    public Double getPrezzo() {
+        return prezzo;
     }
 
-    public ArrayList<SecondoPiatto> getSecondi() {
-        return secondi;
-    }
-    public void addSecondo(SecondoPiatto secondi){this.secondi.add(secondi);}
-    public void removeSecondo(SecondoPiatto secondi){this.secondi.remove(secondi);}
-
-
-    public void addDolci(Dolce dolci) {
-        this.dolci.add(dolci);
-    }
-
-    public void removeDolci(Dolce dolci) {
-        this.dolci.remove(dolci);
-    }
-
-    //getter per l'array dolci
-    public ArrayList<Dolce> getDolci() {
-        return this.dolci;
+    public void addPortata(Portata portata) {
+        portate.add(portata);
+        portate.sort((u1, u2) -> {
+            if (Objects.equals(u1.getPrezzo(), u2.getPrezzo()))
+                return 0;
+            return u1.getPrezzo() < u2.getPrezzo() ? -1 : 1;
+        });
+        portate.sort((u1, u2) -> {
+            if (u1.getOrdinatore() == u2.getOrdinatore())
+                return 0;
+            return u1.getOrdinatore() < u2.getOrdinatore() ? -1 : 1;
+        });
     }
 
-    public ArrayList<PrimoPiatto> getPrimi() {
-        return this.primi;
+    public void removePortata(Portata portata) {
+        portate.remove(portata);
+        portate.sort((u1, u2) -> {
+            if (Objects.equals(u1.getPrezzo(), u2.getPrezzo()))
+                return 0;
+            return u1.getPrezzo() < u2.getPrezzo() ? -1 : 1;
+        });
+        portate.sort((u1, u2) -> {
+            if (u1.getOrdinatore() == u2.getOrdinatore())
+                return 0;
+            return u1.getOrdinatore() < u2.getOrdinatore() ? -1 : 1;
+        });
     }
-    public void addPrimo(PrimoPiatto primi){this.primi.add(primi);}
-    public void removePrimo(PrimoPiatto primi){this.primi.remove(primi);}
 
+    private void setPrezzoMenu() {
+        for (Portata portata : portate) {
+            prezzo += portata.getPrezzo();
+        }
+    }
+
+    public void printMenu() {
+        setPrezzoMenu();
+        boolean primoPrint = true;
+        boolean secondoPrint = true;
+        boolean dolcePrint = true;
+        boolean bevandaPrint = true;
+        System.out.println(nome);
+        System.out.println(tipo.getDescrizione());
+        System.out.println("Prezzo totale: " + prezzo + "€");
+        for(Portata portata : portate) {
+            if (portata instanceof PrimoPiatto && primoPrint) {
+                System.out.println(ColorEnum.GIALLO.getAnsiCode() + "\nPRIMI PIATTI" + ColorEnum.RESET.getAnsiCode());
+                primoPrint = false;
+            }
+            if (portata instanceof SecondoPiatto && secondoPrint) {
+                System.out.println(ColorEnum.CIANO.getAnsiCode() + "\nSECONDI PIATTI" + ColorEnum.RESET.getAnsiCode());
+                secondoPrint = false;
+            }
+            if (portata instanceof Dolce && dolcePrint) {
+                System.out.println(ColorEnum.VIOLA.getAnsiCode() + "\nDOLCI" + ColorEnum.RESET.getAnsiCode());
+                dolcePrint = false;
+            }
+            if (portata instanceof Bevanda && bevandaPrint) {
+                System.out.println(ColorEnum.BLU.getAnsiCode() + "\nBEVANDE" + ColorEnum.RESET.getAnsiCode());
+                bevandaPrint = false;
+            }
+            portata.printPortata();
+        }
+    }
 }
