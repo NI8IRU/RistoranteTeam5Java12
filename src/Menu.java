@@ -83,29 +83,29 @@ public class Menu {
         boolean secondoPrint = true;
         boolean dolcePrint = true;
         boolean bevandaPrint = true;
-        System.out.println(nome);
-        System.out.println("////////////////////////////////////////////////");
-        System.out.println(tipo.getDescrizione());
-        System.out.println("Prezzo totale: " + prezzo + "€");
+        System.out.println("                      "+nome+"                    ");
+        System.out.println("╔═══════════════════ BY JAVA-12 TEAM-5 ═══════════════════╗");
+        System.out.println("\n"+"  "+ tipo.getDescrizione());
+        System.out.println("  Prezzo totale: " + prezzo + "€");
         for(Portata portata : portate) {
             if (portata instanceof PrimoPiatto && primoPrint) {
-                System.out.println(ColorEnum.GIALLO.getAnsiCode() + "\nPRIMI PIATTI" + ColorEnum.RESET.getAnsiCode());
+                System.out.println(ColorEnum.GIALLO.getAnsiCode() + "\n  PRIMI PIATTI" + ColorEnum.RESET.getAnsiCode());
                 primoPrint = false;
             }
             if (portata instanceof SecondoPiatto && secondoPrint) {
-                System.out.println(ColorEnum.CIANO.getAnsiCode() + "\nSECONDI PIATTI" + ColorEnum.RESET.getAnsiCode());
+                System.out.println(ColorEnum.CIANO.getAnsiCode() + "\n  SECONDI PIATTI" + ColorEnum.RESET.getAnsiCode());
                 secondoPrint = false;
             }
             if (portata instanceof Dolce && dolcePrint) {
-                System.out.println(ColorEnum.VIOLA.getAnsiCode() + "\nDOLCI" + ColorEnum.RESET.getAnsiCode());
+                System.out.println(ColorEnum.VIOLA.getAnsiCode() + "\n  DOLCI" + ColorEnum.RESET.getAnsiCode());
                 dolcePrint = false;
             }
             if (portata instanceof Bevanda && bevandaPrint) {
-                System.out.println(ColorEnum.BLU.getAnsiCode() + "\nBEVANDE" + ColorEnum.RESET.getAnsiCode());
+                System.out.println(ColorEnum.BLU.getAnsiCode() + "\n  BEVANDE" + ColorEnum.RESET.getAnsiCode());
                 bevandaPrint = false;
             }
             portata.printPortata();
         }
-        System.out.println("////////////////////////////////////////////////\n");
+        System.out.println("\n╚════════════════════════════════════════════════════════╝\n");
     }
 }
