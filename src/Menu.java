@@ -74,6 +74,7 @@ public class Menu {
         for (Portata portata : portate) {
             prezzo += portata.getPrezzo();
         }
+        prezzo = (double) Math.round(prezzo * 100) / 100;
     }
 
     public void printMenu() {
