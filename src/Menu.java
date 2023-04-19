@@ -83,6 +83,7 @@ public class Menu {
         boolean dolcePrint = true;
         boolean bevandaPrint = true;
         System.out.println(nome);
+        System.out.println("////////////////////////////////////////////////");
         System.out.println(tipo.getDescrizione());
         System.out.println("Prezzo totale: " + prezzo + "€");
         for(Portata portata : portate) {
@@ -104,5 +105,6 @@ public class Menu {
             }
             portata.printPortata();
         }
+        System.out.println("////////////////////////////////////////////////\n");
     }
 }
