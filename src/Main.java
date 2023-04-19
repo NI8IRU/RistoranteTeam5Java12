@@ -46,5 +46,46 @@ public class Main {
 
         menu.printMenu();
 
+        //aggiunto menu a base di pesce
+
+        Menu menuPesce = new Menu("Fantasie di Mare",TipoRistoranteEnum.PESCE);
+
+        PrimoPiatto linguine =new PrimoPiatto("Linguine ai frutti di mare freschi",15.00,480);
+        PrimoPiatto risotto =new PrimoPiatto("Risotto Venere con zucchine e gamberi",13.00,137);
+        PrimoPiatto paccheri=new PrimoPiatto("Paccheri al sugo di calamari",14.00,370);
+
+        SecondoPiatto orata = new SecondoPiatto("Orata al cartoccio",16.50,450.0);
+        SecondoPiatto involtiniSpada = new SecondoPiatto("Involtini di pesce spada e melanzane",13.50,200.0);
+        SecondoPiatto filettoCernia = new SecondoPiatto("Filetto di cernia alla Mediterranea", 18.00,500.0);
+
+        Dolce sorbetto = new Dolce("Sorbetto al limone e menta fresca",4.50,"12");
+        Dolce sbriciolata= new Dolce("Sbriciolata alle fragole",5.00,"18");
+        Dolce pannaCaffe= new Dolce("Panna cotta al caffè e cioccolato",5.00,"15");
+
+        Bevanda vinoChard = new Bevanda("Vino bianco Chardonnay del Salento ",13.00,13.0);
+        Bevanda acquaMinerale = new Bevanda("Acqua minerale naturale o frizzante",2.00,0.0);
+        Bevanda limonata = new Bevanda("Aperitivo analcolico al limone",3.50,0.0);
+
+        menuPesce.addPortata(linguine);
+        menuPesce.addPortata(risotto);
+        menuPesce.addPortata(paccheri);
+
+        menuPesce.addPortata(orata);
+        menuPesce.addPortata(involtiniSpada);
+        menuPesce.addPortata(filettoCernia);
+
+        menuPesce.addPortata(sorbetto);
+        menuPesce.addPortata(sbriciolata);
+        menuPesce.addPortata(pannaCaffe);
+
+        menuPesce.addPortata(vinoChard);
+        menuPesce.addPortata(acquaMinerale);
+        menuPesce.addPortata(limonata);
+
+        menuPesce.printMenu();
+
+
+
+
     }
 }
