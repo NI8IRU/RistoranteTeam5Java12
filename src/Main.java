@@ -24,7 +24,7 @@ public class Main {
         Dolce tiramisu = new Dolce("Tiramisù", 6.99, "15");
 
 
-        Bevanda acqua = new Bevanda("Acqua", 2.0, 0.0);
+        Bevanda acquaMinerale = new Bevanda("Acqua minerale naturale o frizzante",2.00,0.0);
         Bevanda cocaCola = new Bevanda("Coca cola", 4.0, 0.0);
         Bevanda birra = new Bevanda("Birra", 3.0, 4.75);
 
@@ -41,7 +41,7 @@ public class Main {
         menu.addPortata(lonzaDiMaiale);
 
         menu.addPortata(cocaCola);
-        menu.addPortata(acqua);
+        menu.addPortata(acquaMinerale);
         menu.addPortata(birra);
 
         menu.printMenu();
@@ -63,7 +63,6 @@ public class Main {
         Dolce pannaCaffe= new Dolce("Panna cotta al caffè e cioccolato",5.00,"15");
 
         Bevanda vinoChard = new Bevanda("Vino bianco Chardonnay del Salento ",13.00,13.0);
-        Bevanda acquaMinerale = new Bevanda("Acqua minerale naturale o frizzante",2.00,0.0);
         Bevanda limonata = new Bevanda("Aperitivo analcolico al limone",3.50,0.0);
 
         menuPesce.addPortata(linguine);
