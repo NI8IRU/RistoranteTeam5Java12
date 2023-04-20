@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         //modificato --> Fab!
-        Menu menu = new Menu("Test", TipoRistoranteEnum.CARNIVORO);
+        Menu menuCarne = new Menu("Fragranza Carnivora", TipoRistoranteEnum.CARNIVORO);
 
         PrimoPiatto garganelli = new PrimoPiatto("Garganelli con asparagi e prosciutto crudo", 14.50, 265);
         PrimoPiatto risottoAsparagiESpeck = new PrimoPiatto("Risotto asparagi e speck", 12.69, 300);
@@ -28,25 +28,25 @@ public class Main {
         Bevanda cocaCola = new Bevanda("Coca cola", 4.0, 0.0);
         Bevanda birra = new Bevanda("Birra", 3.0, 4.75);
 
-        menu.addPortata(mousse);
-        menu.addPortata(souffle);
-        menu.addPortata(tiramisu);
+        menuCarne.addPortata(mousse);
+        menuCarne.addPortata(souffle);
+        menuCarne.addPortata(tiramisu);
 
-        menu.addPortata(garganelli);
-        menu.addPortata(lasagnaAllaBolognese);
-        menu.addPortata(risottoAsparagiESpeck);
+        menuCarne.addPortata(garganelli);
+        menuCarne.addPortata(lasagnaAllaBolognese);
+        menuCarne.addPortata(risottoAsparagiESpeck);
 
-        menu.addPortata(costolette);
-        menu.addPortata(polloEMandorle);
-        menu.addPortata(lonzaDiMaiale);
+        menuCarne.addPortata(costolette);
+        menuCarne.addPortata(polloEMandorle);
+        menuCarne.addPortata(lonzaDiMaiale);
 
-        menu.addPortata(cocaCola);
-        menu.addPortata(acquaMinerale);
-        menu.addPortata(birra);
+        menuCarne.addPortata(cocaCola);
+        menuCarne.addPortata(acquaMinerale);
+        menuCarne.addPortata(birra);
 
-        menu.printMenu();
+        menuCarne.printMenu();
 
-        //aggiunto menu a base di pesce
+        //aggiunto menuCarne a base di pesce
 
         Menu menuPesce = new Menu("Fantasie di Mare",TipoRistoranteEnum.PESCE);
 
