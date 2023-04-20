@@ -1,9 +1,11 @@
--Non utilizzare “static”
+TASK DELLA SETTIMANA: GENERALIZZARE IL CODICE
 
--Inizializzare lista nel Menu, popolarla nel main
+-Creare classe padre "Portata"
 
--Togliere la funzione printMenu, stampare direttamente nel main
+-Aggiungere Enum colori
 
--Refactor di tutte le classi al singolare
+-Sistemare Enum "classiPadreEdEnum.TipoRistoranteEnum"
 
--Obbiettivi: riuscire a stampare il menu dal main uniformato ( nome: prezzo€ ) ---IMPORTANTE---
+-Inserire un metodo nella classe Menu che stampa il menù
+
+{-BONUS: Creare classe padre "Menu" che contiene più menù}

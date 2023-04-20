@@ -1,68 +1,123 @@
-import portate.*;
+import classiPadreEdEnum.TipoRistoranteEnum;
+import portate.Bevanda;
+import portate.Dolce;
+import portate.PrimoPiatto;
+import portate.SecondoPiatto;
 
 public class Main {
+
     public static void main(String[] args) {
-        Menu menu = new Menu("RistoranteTeam5", TipoRistorante.RISTORANTE);
+        //modificato --> Fab!
+        Menu menuCarne = new Menu("Fragranza Carnivora", TipoRistoranteEnum.CARNIVORO);
+
+        PrimoPiatto garganelli = new PrimoPiatto("Garganelli con asparagi e prosciutto crudo", 14.50, 265);
+        PrimoPiatto risottoAsparagiESpeck = new PrimoPiatto("Risotto asparagi e speck", 12.69, 300);
+        PrimoPiatto lasagnaAllaBolognese = new PrimoPiatto("Lasagna alla Bolognese", 17.80, 336);
 
 
-        //Sezione Secondi
-        SecondoPiatto involtini = new SecondoPiatto("Involtini di Verza ripieni di manzo",12.00,125.00);
-        menu.addSecondo(involtini);
-        SecondoPiatto angus = new SecondoPiatto("Filetto di angus in crosta di sfoglia",14.00,150.00);
-        menu.addSecondo(angus);
-        SecondoPiatto polpette = new SecondoPiatto("Polpette al sugo",10.00,139.00);
-        menu.addSecondo(polpette);
-        SecondoPiatto maiale = new SecondoPiatto("Filetto di maiale al forno con salvia e patate",14.00,150.00);
-        menu.addSecondo(maiale);
-        SecondoPiatto pollo = new SecondoPiatto("Pollo alla cacciatora",13.00,130.00);
-        menu.addSecondo(pollo);
+        SecondoPiatto lonzaDiMaiale = new SecondoPiatto("Lonza di maiale in agrodolce con mele e prugne", 15.5, 150.0);
+        SecondoPiatto costolette = new SecondoPiatto("Costolette d’agnello panate con carciofi e pecorino", 17.63, 100.0);
+        SecondoPiatto polloEMandorle = new SecondoPiatto("Pollo alle mandorle", 16.5, 125.0);
 
-        System.out.println("\nSecondi Piatti");
-        for (SecondoPiatto secondo : menu.getSecondi()) {
-            secondo.printSecondi();
-        }
-
-        //Sezione Dolci
-        Dolce mousse = new Dolce("Mousse ai frutti di bosco", 3.50, "15g");
-        menu.addDolci(mousse);
-        Dolce souffle = new Dolce("Soufflé di mango con crema di cocco e lime", 3.70, "20g");
-        menu.addDolci(souffle);
-        Dolce tiramisu = new Dolce("Tiramisù", 3.99, "25g");
-        menu.addDolci(tiramisu);
-        Dolce torta = new Dolce("Torta di mele", 6.69, "34g");
-        menu.addDolci(torta);
-        Dolce tortino = new Dolce("Tortino al cioccolato", 3.40, "16g");
-        menu.addDolci(tortino);
-        Dolce delizia = new Dolce("Delizia al limone", 4.80, "10g");
-        menu.addDolci(delizia);
-        Dolce novita = new Dolce("Cheesecake ai kinder cereali", 5.65, "79g");
-        menu.addDolci(novita);
-
-        System.out.println("\nDolci");
-        for (Dolce dolce : menu.getDolci()) {
-            dolce.printDolci();
-        }
+        Dolce mousse = new Dolce("Mousse ai frutti di bosco", 5.5, "15");
+        Dolce souffle = new Dolce("Soufflé di mango con crema di cocco e lime", 4.49, "19");
+        Dolce tiramisu = new Dolce("Tiramisù", 6.99, "15");
 
 
-        //Sezione Bevande
-        Bevanda acquaNaturale = new Bevanda("Acqua Naturale", 1.99, 0.0);
-        menu.addBevanda(acquaNaturale);
-        Bevanda acquaGassata = new Bevanda("Acqua Gassata", 1.99, 0.0);
-        menu.addBevanda(acquaGassata);
-        Bevanda cocaCola = new Bevanda("Coca Cola", 3.99, 0.0);
-        menu.addBevanda(cocaCola);
-        Bevanda birra = new Bevanda("Birra", 2.99, 4.9);
-        menu.addBevanda(birra);
-        Bevanda vino = new Bevanda("Vino", 10.00, 12.0);
-        menu.addBevanda(vino);
-        Bevanda amaro = new Bevanda("Amaro", 3.99, 22.0);
-        menu.addBevanda(amaro);
+        Bevanda acquaMinerale = new Bevanda("Acqua minerale naturale o frizzante",2.00,0.0);
+        Bevanda cocaCola = new Bevanda("Coca cola", 4.0, 0.0);
+        Bevanda birra = new Bevanda("Birra", 3.0, 4.75);
 
-        System.out.println("\nBevande");
-        for (Bevanda bevanda : menu.getBevande()) {
-            bevanda.printBevanda();
-        }
+        menuCarne.addPortata(mousse);
+        menuCarne.addPortata(souffle);
+        menuCarne.addPortata(tiramisu);
 
+        menuCarne.addPortata(garganelli);
+        menuCarne.addPortata(lasagnaAllaBolognese);
+        menuCarne.addPortata(risottoAsparagiESpeck);
+
+        menuCarne.addPortata(costolette);
+        menuCarne.addPortata(polloEMandorle);
+        menuCarne.addPortata(lonzaDiMaiale);
+
+        menuCarne.addPortata(cocaCola);
+        menuCarne.addPortata(acquaMinerale);
+        menuCarne.addPortata(birra);
+
+        menuCarne.printMenu();
+
+        //aggiunto menu a base di pesce
+
+        Menu menuPesce = new Menu("Fantasie di Mare",TipoRistoranteEnum.PESCE);
+
+        PrimoPiatto linguine =new PrimoPiatto("Linguine ai frutti di mare freschi",15.00,480);
+        PrimoPiatto risotto =new PrimoPiatto("Risotto Venere con zucchine e gamberi",13.00,137);
+        PrimoPiatto paccheri=new PrimoPiatto("Paccheri al sugo di calamari",14.00,370);
+
+        SecondoPiatto orata = new SecondoPiatto("Orata al cartoccio",16.50,450.0);
+        SecondoPiatto involtiniSpada = new SecondoPiatto("Involtini di pesce spada e melanzane",13.50,200.0);
+        SecondoPiatto filettoCernia = new SecondoPiatto("Filetto di cernia alla Mediterranea", 18.00,500.0);
+
+        Dolce sorbetto = new Dolce("Sorbetto al limone e menta fresca",4.50,"12");
+        Dolce sbriciolata= new Dolce("Sbriciolata alle fragole",5.00,"18");
+        Dolce pannaCaffe= new Dolce("Panna cotta al caffè e cioccolato",5.00,"15");
+
+        Bevanda vinoChard = new Bevanda("Vino bianco Chardonnay del Salento ",13.00,13.0);
+        Bevanda limonata = new Bevanda("Aperitivo analcolico al limone",3.50,0.0);
+
+        menuPesce.addPortata(linguine);
+        menuPesce.addPortata(risotto);
+        menuPesce.addPortata(paccheri);
+
+        menuPesce.addPortata(orata);
+        menuPesce.addPortata(involtiniSpada);
+        menuPesce.addPortata(filettoCernia);
+
+        menuPesce.addPortata(sorbetto);
+        menuPesce.addPortata(sbriciolata);
+        menuPesce.addPortata(pannaCaffe);
+
+        menuPesce.addPortata(vinoChard);
+        menuPesce.addPortata(acquaMinerale);
+        menuPesce.addPortata(limonata);
+
+        menuPesce.printMenu();
+
+        //aggiunto menu vegetariano
+
+        Menu menuVeggi = new Menu("Il Verde Gusto", TipoRistoranteEnum.VEGETARIANO);
+
+        PrimoPiatto tagliatelle = new PrimoPiatto("Tagliatelle all’ uovo con verdure scottate in salsa di soia", 12.00, 285);
+        PrimoPiatto orecchiette = new PrimoPiatto("Orecchiette con porcini e ricotta affumicata", 13.50, 340);
+        PrimoPiatto ravioli = new PrimoPiatto("Ravioli fritti ripieni con squacquerone ed erbette", 12.50, 410);
+
+        SecondoPiatto lenticchie = new SecondoPiatto("Lenticchie condite con latte di cocco", 10.00, 150.0);
+        SecondoPiatto purea = new SecondoPiatto("Crema di patate allo zafferano", 9.50, 140.0);
+        SecondoPiatto verdureCotte = new SecondoPiatto("Verdure cotte di stagione coperte con formaggio fresco", 12.00, 190.0);
+
+        Dolce torta = new Dolce("Torta al latte di cocco e cioccolato fondente", 5.50, "15");
+        Dolce crostata = new Dolce("Crostata vegan alle mele caramellate", 4.50, "13");
+        Dolce sfogliatine = new Dolce("Sfogliatine di pere e marmellata", 4.00, "11");
+
+        Bevanda gazzosa = new Bevanda("Gazzosa", 3.50, 0.0);
+
+        menuVeggi.addPortata(tagliatelle);
+        menuVeggi.addPortata(orecchiette);
+        menuVeggi.addPortata(ravioli);
+
+        menuVeggi.addPortata(lenticchie);
+        menuVeggi.addPortata(purea);
+        menuVeggi.addPortata(verdureCotte);
+
+        menuVeggi.addPortata(torta);
+        menuVeggi.addPortata(crostata);
+        menuVeggi.addPortata(sfogliatine);
+
+        menuVeggi.addPortata(acquaMinerale);
+        menuVeggi.addPortata(gazzosa);
+        menuVeggi.addPortata(birra);
+
+        menuVeggi.printMenu();
 
     }
 }
