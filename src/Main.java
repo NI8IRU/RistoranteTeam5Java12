@@ -46,7 +46,7 @@ public class Main {
 
         menuCarne.printMenu();
 
-        //aggiunto menuCarne a base di pesce
+        //aggiunto menu a base di pesce
 
         Menu menuPesce = new Menu("Fantasie di Mare",TipoRistoranteEnum.PESCE);
 
@@ -83,8 +83,41 @@ public class Main {
 
         menuPesce.printMenu();
 
+        //aggiunto menu vegetariano
 
+        Menu menuVeggi = new Menu("Il Verde Gusto", TipoRistoranteEnum.VEGETARIANO);
 
+        PrimoPiatto tagliatelle = new PrimoPiatto("Tagliatelle all’ uovo con verdure scottate in salsa di soia", 12.00, 285);
+        PrimoPIatto orecchiette = new PrimoPiatto("Orecchiette con porcini e ricotta affumicata", 13.50, 340);
+        PrimoPiatto ravioli = new PrimoPiatto("Ravioli fritti ripieni con squacquerone ed erbette", 12.50, 410);
+
+        SecondoPiatto lenticchie = new SecondoPiatto("Lenticchie condite con latte di cocco", 10.00, 150);
+        SecondoPiatto purea = new SecondoPiatto("Crema di patate allo zafferano", 9.50, 140);
+        SecondoPiatto verdureCotte = new SecondoPiatto("Verdure cotte di stagione coperte con formaggio fresco", 12.00, 190);
+
+        Dolce torta = new Dolce("Torta al latte di cocco e cioccolato fondente", 5.50, "15");
+        Dolce crostata = new Dolce("Crostata vegan alle mele caramellate", 4.50, "13");
+        Dolce sfogliatine = new Dolce("Sfogliatine di pere e marmellata", 4.00, "11");
+
+        Bevanda gazzosa = new Bevanda("Gazzosa", 3.50, 0.0);
+
+        menuVeggi.addPortata(tagliatelle);
+        menuVeggi.addPortata(orecchiette);
+        menuVeggi.addPortata(ravioli);
+
+        menuVeggi.addPortata(lenticchie);
+        menuVeggi.addPortata(purea);
+        menuVeggi.addPortata(verdureCotte);
+
+        menuVeggi.addPortata(torta);
+        menuVeggi.addPortata(crostata);
+        menuVeggi.addPortata(sfogliatine);
+
+        menuVeggi.addPortata(acquaMinerale);
+        menuVeggi.addPortata(gazzosa);
+        menuVeggi.addPortata(birra);
+
+        menuVeggi..printMenu();
 
     }
 }
