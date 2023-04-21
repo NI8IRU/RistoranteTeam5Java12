@@ -1,7 +1,5 @@
 package portate;
 
-import classiPadreEdEnum.Portata;
-
 public class Bevanda extends Portata {
     private Double percentAlcol;
     private static int ordinatore = 4;
@@ -18,6 +16,8 @@ public class Bevanda extends Portata {
     public Double getPercentAlcol() {
         return percentAlcol;
     }
+
+
 
     @Override
     public int getOrdinatore() {

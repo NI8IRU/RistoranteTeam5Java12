@@ -1,7 +1,5 @@
 package portate;
 
-import classiPadreEdEnum.Portata;
-
 //cambiato nome- messo al singolare!
 public class Dolce extends Portata {
     private String perZuccheri;

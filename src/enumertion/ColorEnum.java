@@ -1,6 +1,8 @@
-package classiPadreEdEnum;
+package enumertion;
 
 public enum ColorEnum {
+
+    //TODO come faccio a capire reset che fa, mettiamo una descrizione così al colpo d'occhio sappiamo cos'è
     RESET("\033[0m"),
     BLU("\u001B[34m"),
     CIANO("\u001B[36m"),
@@ -8,7 +10,7 @@ public enum ColorEnum {
     GIALLO("\u001B[33m");
     private final String ansiCode;
 
-    private ColorEnum(String ansiCode) {
+    ColorEnum(String ansiCode) {
         this.ansiCode = ansiCode;
     }
 

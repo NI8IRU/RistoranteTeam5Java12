@@ -1,6 +1,6 @@
-import classiPadreEdEnum.ColorEnum;
-import classiPadreEdEnum.Portata;
-import classiPadreEdEnum.TipoRistoranteEnum;
+import enumertion.ColorEnum;
+import portate.Portata;
+import enumertion.TipoRistoranteEnum;
 import portate.Bevanda;
 import portate.Dolce;
 import portate.PrimoPiatto;
@@ -13,13 +13,14 @@ import java.util.Objects;
 public class Menu {
     private String nome;
     private TipoRistoranteEnum tipo;
-    private Double prezzo = 0.0;
+
     private List<Portata> portate;
 
     public Menu(String nome, TipoRistoranteEnum tipo) {
         this.nome = nome;
         this.tipo = tipo;
-        portate = new ArrayList<>();
+        //TODO perchè non c'è il this come quelli di sopra :)
+        this.portate = new ArrayList<>();
     }
 
     public String getNome() {
@@ -36,10 +37,6 @@ public class Menu {
 
     public void setTipo(TipoRistoranteEnum tipo) {
         this.tipo = tipo;
-    }
-
-    public Double getPrezzo() {
-        return prezzo;
     }
 
     public void addPortata(Portata portata) {
@@ -59,7 +56,7 @@ public class Menu {
     public void removePortata(Portata portata) {
         portate.remove(portata);
         portate.sort((u1, u2) -> {
-            if (Objects.equals(u1.getPrezzo(), u2.getPrezzo()))
+            if (u1.getPrezzo().equals(u2.getPrezzo()))
                 return 0;
             return u1.getPrezzo() < u2.getPrezzo() ? -1 : 1;
         });
@@ -70,15 +67,16 @@ public class Menu {
         });
     }
 
-    private void setPrezzoMenu() {
+    private Double calculatePrice() {
+        Double prezzo= Double.valueOf(0);
         for (Portata portata : portate) {
             prezzo += portata.getPrezzo();
         }
-        prezzo = (double) Math.round(prezzo * 100) / 100;
+        return (double) Math.round(prezzo * 100) / 100;
     }
 
     public void printMenu() {
-        setPrezzoMenu();
+        calculatePrice();
         boolean primoPrint = true;
         boolean secondoPrint = true;
         boolean dolcePrint = true;
@@ -86,7 +84,7 @@ public class Menu {
         System.out.println("                      "+nome+"                    ");
         System.out.println("╔═══════════════════ BY JAVA-12 TEAM-5 ══════════════════╗");
         System.out.println("\n"+"  "+ tipo.getDescrizione());
-        System.out.println("  Prezzo totale: " + prezzo + "€");
+        System.out.println("  Prezzo totale: " + calculatePrice() + "€");
         for(Portata portata : portate) {
             if (portata instanceof PrimoPiatto && primoPrint) {
                 System.out.println(ColorEnum.GIALLO.getAnsiCode() + "\n  PRIMI PIATTI" + ColorEnum.RESET.getAnsiCode());

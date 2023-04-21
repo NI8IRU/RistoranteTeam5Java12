@@ -1,7 +1,5 @@
 package portate;
 
-import classiPadreEdEnum.Portata;
-
 public class PrimoPiatto extends Portata {
     private Integer kcalPerEtto;
     private static int ordinatore = 1;

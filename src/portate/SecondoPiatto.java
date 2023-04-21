@@ -1,7 +1,5 @@
 package portate;
 
-import classiPadreEdEnum.Portata;
-
 public class SecondoPiatto extends Portata {
     private Double pesoCarne;
     private static int ordinatore = 2;

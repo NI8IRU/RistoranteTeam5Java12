@@ -1,4 +1,4 @@
-import classiPadreEdEnum.TipoRistoranteEnum;
+import enumertion.TipoRistoranteEnum;
 import portate.Bevanda;
 import portate.Dolce;
 import portate.PrimoPiatto;
