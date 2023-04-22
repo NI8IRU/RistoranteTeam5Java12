@@ -2,11 +2,12 @@ package portate;
 
 public class PrimoPiatto extends Portata {
     private Integer kcalPerEtto;
-    private static int ordinatore = 1;
+    private final int ordinatore;
 
     public PrimoPiatto(String nome, Double prezzo, Integer kcalPerEtto) {
         super(nome, prezzo);
         this.kcalPerEtto = kcalPerEtto;
+        this.ordinatore = 1;
     }
     public Integer getKcalPerEtto() {
         return kcalPerEtto;

@@ -2,11 +2,12 @@ package portate;
 
 public class SecondoPiatto extends Portata {
     private Double pesoCarne;
-    private static int ordinatore = 2;
+    private final int ordinatore;
 
     public SecondoPiatto(String nome, Double prezzo, Double pesoCarne) {
         super(nome, prezzo);
         this.pesoCarne = pesoCarne;
+        this.ordinatore = 2;
     }
     public Double getPesoCarne() {
         return pesoCarne;

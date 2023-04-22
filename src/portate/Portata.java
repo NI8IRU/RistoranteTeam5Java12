@@ -4,7 +4,7 @@ public abstract class Portata {
     private String nome;
     private Double prezzo;
 
-    private static int ordinatore;
+    private int ordinatore;
 
     public Portata(String nome, Double prezzo) {
         this.nome = nome;

@@ -3,11 +3,12 @@ package portate;
 //cambiato nome- messo al singolare!
 public class Dolce extends Portata {
     private String perZuccheri;
-    private static int ordinatore = 3;
+    private final int ordinatore;
 
     public Dolce(String nome, Double prezzo, String perZuccheri) {
         super(nome, prezzo);
         this.perZuccheri = perZuccheri;
+        this.ordinatore = 3;
     }
 
     public void setPerZuccheri(String perZuccheri) {
