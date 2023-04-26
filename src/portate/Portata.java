@@ -30,6 +30,6 @@ public abstract class Portata {
     public abstract int getOrdinatore();
 
     public void printPortata() {
-        System.out.println("  "+nome + ": " + prezzo + "€");
+        System.out.println("  " + nome + ": " + prezzo + "€");
     }
 }

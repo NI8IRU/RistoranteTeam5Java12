@@ -19,10 +19,17 @@ public class Bevanda extends Portata {
     }
 
 
-
     @Override
     public int getOrdinatore() {
         return ordinatore;
     }
+
+    @Override
+    public void printPortata() {
+        System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
+                + " \n  alcool: " + getPercentAlcol() + "%\n");
+    }
 }
+
+
 

@@ -9,9 +9,11 @@ public class PrimoPiatto extends Portata {
         this.kcalPerEtto = kcalPerEtto;
         this.ordinatore = 1;
     }
+
     public Integer getKcalPerEtto() {
         return kcalPerEtto;
     }
+
     public void setKcalPerEtto(Integer kcalPerEtto) {
         this.kcalPerEtto = kcalPerEtto;
     }
@@ -19,5 +21,11 @@ public class PrimoPiatto extends Portata {
     @Override
     public int getOrdinatore() {
         return ordinatore;
+    }
+
+    @Override
+    public void printPortata() {
+        System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
+                + " \n  " + getKcalPerEtto() + "kcal (presenti per etto); \n");
     }
 }

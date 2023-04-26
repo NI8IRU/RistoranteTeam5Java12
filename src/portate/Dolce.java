@@ -23,4 +23,10 @@ public class Dolce extends Portata {
     public int getOrdinatore() {
         return ordinatore;
     }
+
+    @Override
+    public void printPortata() {
+        System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
+                + " \n  zuccheri presenti al: " + getPerZuccheri() + "%\n");
+    }
 }

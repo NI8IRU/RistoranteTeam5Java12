@@ -9,16 +9,26 @@ public class SecondoPiatto extends Portata {
         this.pesoCarne = pesoCarne;
         this.ordinatore = 2;
     }
+
     public Double getPesoCarne() {
         return pesoCarne;
     }
-    public void setPesoCarne(Double pesoCarne){
-        this.pesoCarne=pesoCarne;
+
+    public void setPesoCarne(Double pesoCarne) {
+        this.pesoCarne = pesoCarne;
     }
 
     @Override
     public int getOrdinatore() {
         return ordinatore;
     }
+
+    @Override
+    public void printPortata() {
+        System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
+                + " \n  peso della carne: " + getPesoCarne() + "g \n");
+    }
+
+
 }
 
