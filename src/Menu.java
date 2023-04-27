@@ -19,7 +19,6 @@ public class Menu {
     public Menu(String nome, TipoRistoranteEnum tipo) {
         this.nome = nome;
         this.tipo = tipo;
-        //TODO perchè non c'è il this come quelli di sopra :)
         this.portate = new ArrayList<>();
     }
 
@@ -42,7 +41,7 @@ public class Menu {
     public void addPortata(Portata portata) {
         portate.add(portata);
         portate.sort((u1, u2) -> {
-            if (Objects.equals(u1.getPrezzo(), u2.getPrezzo()))
+            if (u1.getPrezzo().equals(u2.getPrezzo()))
                 return 0;
             return u1.getPrezzo() < u2.getPrezzo() ? -1 : 1;
         });

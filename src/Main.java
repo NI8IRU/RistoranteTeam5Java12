@@ -15,9 +15,9 @@ public class Main {
         PrimoPiatto lasagnaAllaBolognese = new PrimoPiatto("Lasagna alla Bolognese", 17.80, 336);
 
 
-        SecondoPiatto lonzaDiMaiale = new SecondoPiatto("Lonza di maiale in agrodolce con mele e prugne", 15.5, 150.0);
-        SecondoPiatto costolette = new SecondoPiatto("Costolette d’agnello panate con carciofi e pecorino", 17.63, 100.0);
-        SecondoPiatto polloEMandorle = new SecondoPiatto("Pollo alle mandorle", 16.5, 125.0);
+        SecondoPiatto lonzaDiMaiale = new SecondoPiatto("Lonza di maiale in agrodolce con mele e prugne", 15.5, 150.0, TipoRistoranteEnum.CARNIVORO);
+        SecondoPiatto costolette = new SecondoPiatto("Costolette d’agnello panate con carciofi e pecorino", 17.63, 100.0, TipoRistoranteEnum.CARNIVORO);
+        SecondoPiatto polloEMandorle = new SecondoPiatto("Pollo alle mandorle", 16.5, 125.0, TipoRistoranteEnum.CARNIVORO);
 
         Dolce mousse = new Dolce("Mousse ai frutti di bosco", 5.5, "15");
         Dolce souffle = new Dolce("Soufflé di mango con crema di cocco e lime", 4.49, "19");
@@ -54,9 +54,9 @@ public class Main {
         PrimoPiatto risotto =new PrimoPiatto("Risotto Venere con zucchine e gamberi",13.00,137);
         PrimoPiatto paccheri=new PrimoPiatto("Paccheri al sugo di calamari",14.00,370);
 
-        SecondoPiatto orata = new SecondoPiatto("Orata al cartoccio",16.50,450.0);
-        SecondoPiatto involtiniSpada = new SecondoPiatto("Involtini di pesce spada e melanzane",13.50,200.0);
-        SecondoPiatto filettoCernia = new SecondoPiatto("Filetto di cernia alla Mediterranea", 18.00,500.0);
+        SecondoPiatto orata = new SecondoPiatto("Orata al cartoccio",16.50,450.0, TipoRistoranteEnum.PESCE);
+        SecondoPiatto involtiniSpada = new SecondoPiatto("Involtini di pesce spada e melanzane",13.50,200.0,TipoRistoranteEnum.PESCE);
+        SecondoPiatto filettoCernia = new SecondoPiatto("Filetto di cernia alla Mediterranea", 18.00,500.0, TipoRistoranteEnum.PESCE);
 
         Dolce sorbetto = new Dolce("Sorbetto al limone e menta fresca",4.50,"12");
         Dolce sbriciolata= new Dolce("Sbriciolata alle fragole",5.00,"18");
@@ -91,9 +91,9 @@ public class Main {
         PrimoPiatto orecchiette = new PrimoPiatto("Orecchiette con porcini e ricotta affumicata", 13.50, 340);
         PrimoPiatto ravioli = new PrimoPiatto("Ravioli fritti ripieni con squacquerone ed erbette", 12.50, 410);
 
-        SecondoPiatto lenticchie = new SecondoPiatto("Lenticchie condite con latte di cocco", 10.00, 150.0);
-        SecondoPiatto purea = new SecondoPiatto("Crema di patate allo zafferano", 9.50, 140.0);
-        SecondoPiatto verdureCotte = new SecondoPiatto("Verdure cotte di stagione coperte con formaggio fresco", 12.00, 190.0);
+        SecondoPiatto lenticchie = new SecondoPiatto("Lenticchie condite con latte di cocco", 10.00, 150.0, TipoRistoranteEnum.VEGETARIANO);
+        SecondoPiatto purea = new SecondoPiatto("Crema di patate allo zafferano", 9.50, 140.0, TipoRistoranteEnum.VEGETARIANO);
+        SecondoPiatto verdureCotte = new SecondoPiatto("Verdure cotte di stagione coperte con formaggio fresco", 12.00, 190.0,TipoRistoranteEnum.VEGETARIANO);
 
         Dolce torta = new Dolce("Torta al latte di cocco e cioccolato fondente", 5.50, "15");
         Dolce crostata = new Dolce("Crostata vegan alle mele caramellate", 4.50, "13");
