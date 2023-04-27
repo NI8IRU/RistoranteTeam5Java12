@@ -66,8 +66,8 @@ public class Menu {
         });
     }
 
-    private Double calculatePrice() {
-        Double prezzo = Double.valueOf(0);
+    public Double calculatePrice() {
+        Double prezzo = 0.0;
         for (Portata portata : portate) {
             prezzo += portata.getPrezzo();
         }

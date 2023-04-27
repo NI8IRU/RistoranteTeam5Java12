@@ -44,7 +44,6 @@ public class Main {
         menuCarne.addPortata(acquaMinerale);
         menuCarne.addPortata(birra);
 
-        menuCarne.printMenu();
 
         //aggiunto menu a base di pesce
 
@@ -81,7 +80,6 @@ public class Main {
         menuPesce.addPortata(acquaMinerale);
         menuPesce.addPortata(limonata);
 
-        menuPesce.printMenu();
 
         //aggiunto menu vegetariano
 
@@ -117,7 +115,15 @@ public class Main {
         menuVeggi.addPortata(gazzosa);
         menuVeggi.addPortata(birra);
 
-        menuVeggi.printMenu();
 
+        Indirizzo indirizzo = new Indirizzo("Via Genova Thaon di Revel", "Milano", 3, 20159, "Milano", "");
+
+        Ristorante ristorante = new Ristorante("Team5 Restaurant", "1", indirizzo);
+
+        ristorante.addMenu(menuCarne);
+        ristorante.addMenu(menuPesce);
+        ristorante.addMenu(menuVeggi);
+
+        ristorante.printOrdinazione();
     }
 }
