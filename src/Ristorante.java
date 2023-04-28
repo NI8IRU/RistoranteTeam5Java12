@@ -53,7 +53,10 @@ public class Ristorante {
 
     public void printOrdinazione() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println(getNome());
+        this.indirizzo.printIndirizzo();
 
+        System.out.println("Elenco dei menù:");
         for (Menu menu : menus) {
             System.out.println(menu.getNome() + ": " + menu.calculatePrice() + "€");
             System.out.println(menu.getTipo().getDescrizione());
