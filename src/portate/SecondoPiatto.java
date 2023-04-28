@@ -14,7 +14,6 @@ public class SecondoPiatto extends Portata {
         this.pesoPiatto = pesoPiatto;
         this.ordinatore = 2;
         this.tipo = tipo;
-
     }
 
     public Double getPesoPiatto() {
@@ -31,6 +30,7 @@ public class SecondoPiatto extends Portata {
     }
 
 
+    //TODO è il posto giusto di mettere il tipo
     @Override
     public void printPortata() {
 

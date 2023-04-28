@@ -32,4 +32,7 @@ public abstract class Portata {
     public void printPortata() {
         System.out.println("  " + nome + ": " + prezzo + "€");
     }
+
+
+    //TODO fare anche un metodo in overloaded che passa i colori come parametri
 }

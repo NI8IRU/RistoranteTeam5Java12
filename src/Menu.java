@@ -105,4 +105,23 @@ public class Menu {
         }
         System.out.println("\n╚════════════════════════════════════════════════════════╝\n");
     }
+
+    //TODO parlane insieme
+    public void printMenu() {
+        System.out.println(TextStyleEnum.ANSI_RED_BACKGROUND.getValue() +
+                TextStyleEnum.EMOJY_FIRE.getValue() + TextStyleEnum.ANSI_BOLD.getValue() + TextStyleEnum.ANSI_BLACK.getValue() + getRestaurantName() +
+                TextStyleEnum.EMOJY_FIRE.getValue() + TextStyleEnum.ANSI_RESET.getValue() + "\n");
+        System.out.println("Chef: " + getChefName() + "\n");
+        System.out.println(getDescription() + "\n");
+        System.out.println("\n PRIMI \n");
+        listaPortata.stream().filter(primo -> primo.getTipoPortata() == TipoPortataEnum.PRIMO).forEach(primo -> primo.printInfo());
+        System.out.println("\n SECONDI \n");
+        listaPortata.stream().filter(secondo -> secondo.getTipoPortata() == TipoPortataEnum.SECONDO).forEach(secondo -> secondo.printInfo());
+        System.out.println("\n DESSERT \n");
+        listaPortata.stream().filter(dessert -> dessert.getTipoPortata() == TipoPortataEnum.DESSERT).forEach(dessert -> dessert.printInfo());
+        System.out.println("\n BEVANDE \n");
+        listaPortata.stream().filter(bevanda -> bevanda.getTipoPortata() == TipoPortataEnum.BEVANDA).forEach(bevanda -> bevanda.printInfo());
+        System.out.println("\n BUON APPETITO!!!");
+    }
+
 }

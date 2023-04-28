@@ -51,6 +51,7 @@ public class Ristorante {
         this.menus.remove(menu);
     }
 
+    //TODO print Menu
     public void printOrdinazione() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(getNome());

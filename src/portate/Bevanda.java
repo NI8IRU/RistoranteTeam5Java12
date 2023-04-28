@@ -4,6 +4,7 @@ public class Bevanda extends Portata {
     private Double percentAlcol;
     private final int ordinatore;
 
+    //TODO inserire enumerato
     public Bevanda(String nome, Double prezzo, Double percentAlcol) {
         super(nome, prezzo);
         this.percentAlcol = percentAlcol;
