@@ -1,14 +1,13 @@
 package portate;
 
-import classiPadreEdEnum.Portata;
-
 public class Bevanda extends Portata {
     private Double percentAlcol;
-    private static int ordinatore = 4;
+    private final int ordinatore;
 
     public Bevanda(String nome, Double prezzo, Double percentAlcol) {
         super(nome, prezzo);
         this.percentAlcol = percentAlcol;
+        this.ordinatore = 4;
     }
 
     public void setPercentAlcol(Double percentAlcol) {
@@ -19,9 +18,18 @@ public class Bevanda extends Portata {
         return percentAlcol;
     }
 
+
     @Override
     public int getOrdinatore() {
         return ordinatore;
     }
+
+    @Override
+    public void printPortata() {
+        System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
+                + " \n  alcool: " + getPercentAlcol() + "%\n");
+    }
 }
+
+
 

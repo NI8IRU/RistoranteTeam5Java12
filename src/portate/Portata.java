@@ -1,9 +1,10 @@
-package classiPadreEdEnum;
+package portate;
 
 public abstract class Portata {
     private String nome;
     private Double prezzo;
-    private static int ordinatore;
+
+    private int ordinatore;
 
     public Portata(String nome, Double prezzo) {
         this.nome = nome;
@@ -29,6 +30,6 @@ public abstract class Portata {
     public abstract int getOrdinatore();
 
     public void printPortata() {
-        System.out.println("  "+nome + ": " + prezzo + "€");
+        System.out.println("  " + nome + ": " + prezzo + "€");
     }
 }

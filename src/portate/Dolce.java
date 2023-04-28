@@ -1,15 +1,14 @@
 package portate;
 
-import classiPadreEdEnum.Portata;
-
 //cambiato nome- messo al singolare!
 public class Dolce extends Portata {
     private String perZuccheri;
-    private static int ordinatore = 3;
+    private final int ordinatore;
 
     public Dolce(String nome, Double prezzo, String perZuccheri) {
         super(nome, prezzo);
         this.perZuccheri = perZuccheri;
+        this.ordinatore = 3;
     }
 
     public void setPerZuccheri(String perZuccheri) {
@@ -23,5 +22,11 @@ public class Dolce extends Portata {
     @Override
     public int getOrdinatore() {
         return ordinatore;
+    }
+
+    @Override
+    public void printPortata() {
+        System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
+                + " \n  zuccheri presenti al: " + getPerZuccheri() + "%\n");
     }
 }
