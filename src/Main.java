@@ -65,7 +65,6 @@ public class Main {
         menuPesce.addPortata(acquaMinerale);
         menuPesce.addPortata(limonata);
 
-
         //Menù vegetariano
         Menu menuVeggi = new Menu("Il Verde Gusto", TipoRistoranteEnum.VEGETARIANO);
 

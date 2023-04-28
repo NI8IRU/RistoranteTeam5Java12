@@ -73,6 +73,7 @@ public class Ristorante {
                     scelta = false;
                 }
             }
+            if (scelta) System.out.println("Errore nella selezione del menù..\n");
         }while (scelta);
     }
 }
