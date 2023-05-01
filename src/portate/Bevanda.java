@@ -1,5 +1,7 @@
 package portate;
 
+import enumertion.OrdinatoreEnum;
+
 public class Bevanda extends Portata {
     private Double percentAlcol;
     private final int ordinatore;
@@ -8,7 +10,8 @@ public class Bevanda extends Portata {
     public Bevanda(String nome, Double prezzo, Double percentAlcol) {
         super(nome, prezzo);
         this.percentAlcol = percentAlcol;
-        this.ordinatore = 4;
+        //dato il valore dell'enum
+        this.ordinatore = OrdinatoreEnum.QUARTA_POSIZIONE.getPosizionePortataSulMenu();
     }
 
     public void setPercentAlcol(Double percentAlcol) {
