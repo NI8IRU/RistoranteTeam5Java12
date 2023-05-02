@@ -110,13 +110,13 @@ public class Menu {
     public void printMenu() {
         System.out.println(tipo.getDescrizione() + "\n");
         System.out.println("\n PRIMI \n");
-        portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE.getPosizionePortataSulMenu()).forEach(primo -> primo.printPortata());
+        portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
         System.out.println("\n SECONDI \n");
-        portate.stream().filter(secondo -> secondo.getOrdinatore() == OrdinatoreEnum.SECONDA_POSIZIONE.getPosizionePortataSulMenu()).forEach(secondo -> secondo.printPortata());
+        portate.stream().filter(secondo -> secondo.getOrdinatore() == OrdinatoreEnum.SECONDA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
         System.out.println("\n DESSERT \n");
-        portate.stream().filter(dessert -> dessert.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE.getPosizionePortataSulMenu()).forEach(dessert -> dessert.printPortata());
+        portate.stream().filter(dessert -> dessert.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
         System.out.println("\n BEVANDE \n");
-        portate.stream().filter(bevanda -> bevanda.getOrdinatore() == OrdinatoreEnum.QUARTA_POSIZIONE.getPosizionePortataSulMenu()).forEach(bevanda -> bevanda.printPortata());
+        portate.stream().filter(bevanda -> bevanda.getOrdinatore() == OrdinatoreEnum.QUARTA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
         System.out.println("\n BUON APPETITO!!!");
     }
 
