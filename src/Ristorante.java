@@ -51,30 +51,14 @@ public class Ristorante {
         this.menus.remove(menu);
     }
 
-    //TODO print Menu
+    //Corretta la funzione printOrdinazione, adesso stampa tutti i menù nella lista attraverso un ciclo for
     public void printOrdinazione() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(getNome());
         this.indirizzo.printIndirizzo();
 
-        System.out.println("Elenco dei menù:");
         for (Menu menu : menus) {
-            System.out.println(menu.getNome() + ": " + menu.calculatePrice() + "€");
-            System.out.println(menu.getTipo().getDescrizione());
-            System.out.println(" ");
+            menu.printMenu();
         }
-        boolean scelta = true;
-        do {
-            System.out.println("Quale menù desidera?");
-            String input = scanner.next();
-
-            for (Menu menu : menus) {
-                if (menu.getNome().toLowerCase().contains(input.toLowerCase())) {
-                    menu.printMenu();
-                    scelta = false;
-                }
-            }
-            if (scelta) System.out.println("Errore nella selezione del menù..\n");
-        }while (scelta);
     }
 }
