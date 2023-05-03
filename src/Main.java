@@ -93,7 +93,7 @@ public class Main {
         menuVeggi.addPortata(birra);
 
         //Chiamata del ristorante
-        Ristorante ristorante = new Ristorante("Team5 Restaurant", "1", new Indirizzo("Via Genova Thaon di Revel", "Milano", 3, 20159, "Milano", ""));
+        Ristorante ristorante=new Ristorante("Team5 Restaurant","Mario Astori","3",new Indirizzo("Via Genova Thaon di Revel", "Milano", 3, 20159, "Milano", ""));
 
         ristorante.addMenu(menuCarne);
         ristorante.addMenu(menuPesce);

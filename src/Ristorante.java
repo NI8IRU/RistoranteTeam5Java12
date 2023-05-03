@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class Ristorante {
     private String nome;
+    private String chef;
     private String stelleRistorante;
     private Indirizzo indirizzo;
     private final List<Menu> menus;
 
-    public Ristorante(String nome, String stelleRistorante, Indirizzo indirizzo) {
+    public Ristorante(String nome,String chef, String stelleRistorante, Indirizzo indirizzo) {
         this.nome = nome;
+        this.chef=chef;
         this.stelleRistorante = stelleRistorante;
         this.indirizzo = indirizzo;
         this.menus = new ArrayList<>();
@@ -21,6 +23,14 @@ public class Ristorante {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getChef(){
+        return chef;
+    }
+
+    public void setChef(String chef) {
+        this.chef = chef;
     }
 
     public String getStelleRistorante() {
@@ -55,6 +65,7 @@ public class Ristorante {
     public void printOrdinazione() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(getNome());
+        System.out.println("A cura dello chef stellato : "+getChef());
         this.indirizzo.printIndirizzo();
 
         for (Menu menu : menus) {
