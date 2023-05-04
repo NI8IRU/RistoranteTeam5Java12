@@ -2,11 +2,6 @@ import enumertion.ColorEnum;
 import enumertion.OrdinatoreEnum;
 import portate.Portata;
 import enumertion.TipoRistoranteEnum;
-import portate.Bevanda;
-import portate.Dolce;
-import portate.PrimoPiatto;
-import portate.SecondoPiatto;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -120,4 +115,20 @@ public class Menu {
         System.out.println("\n BUON APPETITO!!!");
     }
 
+//Overload della funzione printMenu
+//Questo metodo stampa i menù colorati in base al tipo
+    public void printMenu(TipoRistoranteEnum tipoMenu) {
+        System.out.println(tipoMenu.getColore().getAnsiCode());
+        System.out.println(ColorEnum.NERO.getAnsiCode());
+        System.out.println(tipo.getDescrizione() + "\n");
+        System.out.println("\n PRIMI \n");
+        portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
+        System.out.println("\n SECONDI \n");
+        portate.stream().filter(secondo -> secondo.getOrdinatore() == OrdinatoreEnum.SECONDA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
+        System.out.println("\n DESSERT \n");
+        portate.stream().filter(dessert -> dessert.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
+        System.out.println("\n BEVANDE \n");
+        portate.stream().filter(bevanda -> bevanda.getOrdinatore() == OrdinatoreEnum.QUARTA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
+        System.out.println(ColorEnum.RESET.getAnsiCode());
+    }
 }

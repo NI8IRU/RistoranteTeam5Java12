@@ -9,6 +9,7 @@ public enum ColorEnum {
     CIANO("\u001B[36m"),
     VIOLA("\033[0;35m"),
     GIALLO("\u001B[33m"),
+    NERO("\u001B[30m"),
 
     // ENUM background colorato
     BG_ROSSO("\u001B[41m"),

@@ -34,5 +34,4 @@ public abstract class Portata {
     }
 
 
-    //TODO fare anche un metodo in overloaded che passa i colori come parametri
 }

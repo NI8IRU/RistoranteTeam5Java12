@@ -32,7 +32,7 @@ public class SecondoPiatto extends Portata {
     }
 
 
-    //TODO è il posto giusto di mettere il tipo
+    //Funzione che stampa in modo diverso in base al tipo del menù
     @Override
     public void printPortata() {
 

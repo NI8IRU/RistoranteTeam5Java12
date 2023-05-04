@@ -69,7 +69,7 @@ public class Ristorante {
         this.indirizzo.printIndirizzo();
 
         for (Menu menu : menus) {
-            menu.printMenu();
+            menu.printMenu(menu.getTipo());
         }
     }
 }
