@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Ristorante {
     private String nome;
@@ -63,7 +62,6 @@ public class Ristorante {
 
     //Corretta la funzione printOrdinazione, adesso stampa tutti i menù nella lista attraverso un ciclo for
     public void printOrdinazione() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println(getNome());
         System.out.println("A cura dello chef stellato : "+getChef());
         this.indirizzo.printIndirizzo();
