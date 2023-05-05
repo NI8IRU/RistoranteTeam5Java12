@@ -1,17 +1,18 @@
 import enumertion.ColorEnum;
 import enumertion.OrdinatoreEnum;
+import enumertion.TipoEnum;
 import portate.Portata;
-import enumertion.TipoRistoranteEnum;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
     private String nome;
-    private TipoRistoranteEnum tipo;
+    private TipoEnum tipo;
 
     private final List<Portata> portate;
 
-    public Menu(String nome, TipoRistoranteEnum tipo) {
+    public Menu(String nome, TipoEnum tipo) {
         this.nome = nome;
         this.tipo = tipo;
         this.portate = new ArrayList<>();
@@ -25,11 +26,11 @@ public class Menu {
         this.nome = nome;
     }
 
-    public TipoRistoranteEnum getTipo() {
+    public TipoEnum getTipo() {
         return tipo;
     }
 
-    public void setTipo(TipoRistoranteEnum tipo) {
+    public void setTipo(TipoEnum tipo) {
         this.tipo = tipo;
     }
 
@@ -117,8 +118,9 @@ public class Menu {
 
 //Overload della funzione printMenu
 //Questo metodo stampa i menù colorati in base al tipo
-    public void printMenu(TipoRistoranteEnum tipoMenu) {
-        System.out.println(tipoMenu.getColore().getAnsiCode());
+    public void printMenu(ColorEnum colorEnum) {
+        //TODO rivediamo il passaggio di oggetti e come possiamo usare questo metodo
+        System.out.println(this.tipo.getColore().getAnsiCode());
         System.out.println(ColorEnum.NERO.getAnsiCode());
         System.out.println(tipo.getDescrizione() + "\n");
         System.out.println("\n PRIMI \n");

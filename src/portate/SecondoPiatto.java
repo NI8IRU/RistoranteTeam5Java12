@@ -1,16 +1,16 @@
 package portate;
 
 import enumertion.OrdinatoreEnum;
-import enumertion.TipoRistoranteEnum;
+import enumertion.TipoEnum;
 
 public class SecondoPiatto extends Portata {
 
-    private TipoRistoranteEnum tipo;
+    private TipoEnum tipo;
 
     private Double pesoPiatto;
     private final int ordinatore;
 
-    public SecondoPiatto(String nome, Double prezzo, Double pesoPiatto, TipoRistoranteEnum tipo) {
+    public SecondoPiatto(String nome, Double prezzo, Double pesoPiatto, TipoEnum tipo) {
         super(nome, prezzo);
         this.pesoPiatto = pesoPiatto;
         //dato il valore dell'enum

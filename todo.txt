@@ -4,7 +4,7 @@ TASK DELLA SETTIMANA: GENERALIZZARE IL CODICE
 
 -Aggiungere Enum colori
 
--Sistemare Enum "enumertion.TipoRistoranteEnum"
+-Sistemare Enum "enumertion.TipoEnum"
 
 -Inserire un metodo nella classe Menu che stampa il menù
 

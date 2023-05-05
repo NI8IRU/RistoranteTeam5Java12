@@ -4,6 +4,8 @@ import java.util.List;
 public class Ristorante {
     private String nome;
     private String chef;
+
+    //TODO forse è meglio un enumerato
     private String stelleRistorante;
     private Indirizzo indirizzo;
     private final List<Menu> menus;
@@ -61,6 +63,8 @@ public class Ristorante {
     }
 
     //Corretta la funzione printOrdinazione, adesso stampa tutti i menù nella lista attraverso un ciclo for
+
+    //TODO far stampare solo il menù richiesto dal cliente
     public void printOrdinazione() {
         System.out.println(getNome());
         System.out.println("A cura dello chef stellato : "+getChef());

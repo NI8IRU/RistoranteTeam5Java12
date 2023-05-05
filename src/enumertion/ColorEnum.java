@@ -4,6 +4,8 @@ public enum ColorEnum {
 
     //ENUM per aggiungere colori alle stringhe
     // RESET da utilizzare per interrompere la colorazione delle stringhe
+
+    //TODO inserire un campo descrizione per capire cosa fa questo comando: sfondo blu ecc ecc
     RESET("\033[0m"),
     BLU("\u001B[34m"),
     CIANO("\u001B[36m"),
