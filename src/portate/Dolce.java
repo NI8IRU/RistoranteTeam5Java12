@@ -5,7 +5,6 @@ import enumertion.OrdinatoreEnum;
 //cambiato nome- messo al singolare!
 public class Dolce extends Portata {
     private String perZuccheri;
-    private final int ordinatore;
 
     /**
      *
@@ -14,10 +13,9 @@ public class Dolce extends Portata {
      * @param perZuccheri
      */
     public Dolce(String nome, Double prezzo, String perZuccheri) {
-        super(nome, prezzo);
+        super(nome, prezzo,OrdinatoreEnum.TERZA_POSIZIONE);
         this.perZuccheri = perZuccheri;
         //dato il valore dell'enum
-        this.ordinatore = OrdinatoreEnum.TERZA_POSIZIONE.getPosizionePortataSulMenu();
     }
 
     public void setPerZuccheri(String perZuccheri) {
@@ -30,11 +28,6 @@ public class Dolce extends Portata {
      */
     public String getPerZuccheri() {
         return perZuccheri;
-    }
-
-    @Override
-    public int getOrdinatore() {
-        return ordinatore;
     }
 
     /**
