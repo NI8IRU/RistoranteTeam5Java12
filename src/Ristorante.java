@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class Ristorante {
     private String nome;
+    private String chef;
     private String stelleRistorante;
     private Indirizzo indirizzo;
     private final List<Menu> menus;
 
-    public Ristorante(String nome, String stelleRistorante, Indirizzo indirizzo) {
+    public Ristorante(String nome,String chef, String stelleRistorante, Indirizzo indirizzo) {
         this.nome = nome;
+        this.chef=chef;
         this.stelleRistorante = stelleRistorante;
         this.indirizzo = indirizzo;
         this.menus = new ArrayList<>();
@@ -21,6 +23,14 @@ public class Ristorante {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getChef(){
+        return chef;
+    }
+
+    public void setChef(String chef) {
+        this.chef = chef;
     }
 
     public String getStelleRistorante() {
@@ -51,29 +61,15 @@ public class Ristorante {
         this.menus.remove(menu);
     }
 
+    //Corretta la funzione printOrdinazione, adesso stampa tutti i menù nella lista attraverso un ciclo for
     public void printOrdinazione() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(getNome());
+        System.out.println("A cura dello chef stellato : "+getChef());
         this.indirizzo.printIndirizzo();
 
-        System.out.println("Elenco dei menù:");
         for (Menu menu : menus) {
-            System.out.println(menu.getNome() + ": " + menu.calculatePrice() + "€");
-            System.out.println(menu.getTipo().getDescrizione());
-            System.out.println(" ");
+            menu.printMenu(menu.getTipo());
         }
-        boolean scelta = true;
-        do {
-            System.out.println("Quale menù desidera?");
-            String input = scanner.next();
-
-            for (Menu menu : menus) {
-                if (menu.getNome().toLowerCase().contains(input.toLowerCase())) {
-                    menu.printMenu();
-                    scelta = false;
-                }
-            }
-            if (scelta) System.out.println("Errore nella selezione del menù..\n");
-        }while (scelta);
     }
 }

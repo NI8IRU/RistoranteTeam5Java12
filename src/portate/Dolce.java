@@ -1,5 +1,7 @@
 package portate;
 
+import enumertion.OrdinatoreEnum;
+
 //cambiato nome- messo al singolare!
 public class Dolce extends Portata {
     private String perZuccheri;
@@ -8,7 +10,8 @@ public class Dolce extends Portata {
     public Dolce(String nome, Double prezzo, String perZuccheri) {
         super(nome, prezzo);
         this.perZuccheri = perZuccheri;
-        this.ordinatore = 3;
+        //dato il valore dell'enum
+        this.ordinatore = OrdinatoreEnum.TERZA_POSIZIONE.getPosizionePortataSulMenu();
     }
 
     public void setPerZuccheri(String perZuccheri) {

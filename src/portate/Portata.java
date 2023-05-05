@@ -32,4 +32,6 @@ public abstract class Portata {
     public void printPortata() {
         System.out.println("  " + nome + ": " + prezzo + "€");
     }
+
+
 }
