@@ -44,7 +44,7 @@ public class Menu {
         portate.sort((u1, u2) -> {
             if (u1.getOrdinatore() == u2.getOrdinatore())
                 return 0;
-            return u1.getOrdinatore() < u2.getOrdinatore() ? -1 : 1;
+            return u1.getOrdinatore().getPosizionePortataSulMenu() < u2.getOrdinatore().getPosizionePortataSulMenu() ? -1 : 1;
         });
     }
 
@@ -103,18 +103,18 @@ public class Menu {
 //    }
 
     //Regolarizzata la nuova funzione printMenu, rimane solo da abbellire la formattazione del testo
-    public void printMenu() {
-        System.out.println(tipo.getDescrizione() + "\n");
-        System.out.println("\n PRIMI \n");
-        portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
-        System.out.println("\n SECONDI \n");
-        portate.stream().filter(secondo -> secondo.getOrdinatore() == OrdinatoreEnum.SECONDA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
-        System.out.println("\n DESSERT \n");
-        portate.stream().filter(dessert -> dessert.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
-        System.out.println("\n BEVANDE \n");
-        portate.stream().filter(bevanda -> bevanda.getOrdinatore() == OrdinatoreEnum.QUARTA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
-        System.out.println("\n BUON APPETITO!!!");
-    }
+//    public void printMenu() {
+//        System.out.println(tipo.getDescrizione() + "\n");
+//        System.out.println("\n PRIMI \n");
+//        portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
+//        System.out.println("\n SECONDI \n");
+//        portate.stream().filter(secondo -> secondo.getOrdinatore() == OrdinatoreEnum.SECONDA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
+//        System.out.println("\n DESSERT \n");
+//        portate.stream().filter(dessert -> dessert.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
+//        System.out.println("\n BEVANDE \n");
+//        portate.stream().filter(bevanda -> bevanda.getOrdinatore() == OrdinatoreEnum.QUARTA_POSIZIONE.getPosizionePortataSulMenu()).forEach(Portata::printPortata);
+//        System.out.println("\n BUON APPETITO!!!");
+//    }
 
 //Overload della funzione printMenu
 //Questo metodo stampa i menù colorati in base al tipo

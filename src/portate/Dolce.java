@@ -7,15 +7,15 @@ public class Dolce extends Portata {
     private String perZuccheri;
 
     /**
-     *
      * @param nome
      * @param prezzo
      * @param perZuccheri
      */
     public Dolce(String nome, Double prezzo, String perZuccheri) {
-        super(nome, prezzo,OrdinatoreEnum.TERZA_POSIZIONE);
+        //messo il valore dell'ordinatore nel super!
+        super(nome, prezzo, OrdinatoreEnum.TERZA_POSIZIONE);
         this.perZuccheri = perZuccheri;
-        //dato il valore dell'enum
+
     }
 
     public void setPerZuccheri(String perZuccheri) {
@@ -23,7 +23,6 @@ public class Dolce extends Portata {
     }
 
     /**
-     *
      * @return percentuale zuccheri in un dolce
      */
     public String getPerZuccheri() {
@@ -32,7 +31,6 @@ public class Dolce extends Portata {
 
     /**
      * stampa le informazioni della portata
-     *
      */
     @Override
     public void printPortata() {

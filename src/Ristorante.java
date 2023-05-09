@@ -71,7 +71,9 @@ public class Ristorante {
         this.indirizzo.printIndirizzo();
 
         for (Menu menu : menus) {
-            menu.printMenu(menu.getTipo());
+
+            //aggiunto '.getColore()'
+            menu.printMenu(menu.getTipo().getColore());
         }
     }
 }

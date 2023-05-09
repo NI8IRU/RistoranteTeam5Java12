@@ -8,13 +8,11 @@ public class SecondoPiatto extends Portata {
     private TipoEnum tipo;
 
     private Double pesoPiatto;
-    private final int ordinatore;
 
     public SecondoPiatto(String nome, Double prezzo, Double pesoPiatto, TipoEnum tipo) {
-        super(nome, prezzo);
+        //messo il valore dell'ordinatore nel super!
+        super(nome, prezzo, OrdinatoreEnum.SECONDA_POSIZIONE);
         this.pesoPiatto = pesoPiatto;
-        //dato il valore dell'enum
-        this.ordinatore = OrdinatoreEnum.SECONDA_POSIZIONE.getPosizionePortataSulMenu();
         this.tipo = tipo;
     }
 
@@ -26,10 +24,6 @@ public class SecondoPiatto extends Portata {
         this.pesoPiatto = pesoPiatto;
     }
 
-    @Override
-    public int getOrdinatore() {
-        return ordinatore;
-    }
 
 
     //Funzione che stampa in modo diverso in base al tipo del menù
