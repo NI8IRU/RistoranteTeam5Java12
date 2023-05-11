@@ -1,3 +1,5 @@
+import enumertion.StelleRistorante;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,14 +7,13 @@ public class Ristorante {
     private String nome;
     private String chef;
 
-    //TODO forse è meglio un enumerato
-    private String stelleRistorante;
+    private StelleRistorante stelleRistorante;
     private Indirizzo indirizzo;
     private final List<Menu> menus;
 
-    public Ristorante(String nome,String chef, String stelleRistorante, Indirizzo indirizzo) {
+    public Ristorante(String nome,String chef, StelleRistorante stelleRistorante, Indirizzo indirizzo) {
         this.nome = nome;
-        this.chef=chef;
+        this.chef = chef;
         this.stelleRistorante = stelleRistorante;
         this.indirizzo = indirizzo;
         this.menus = new ArrayList<>();
@@ -34,11 +35,11 @@ public class Ristorante {
         this.chef = chef;
     }
 
-    public String getStelleRistorante() {
+    public StelleRistorante getStelleRistorante() {
         return stelleRistorante;
     }
 
-    public void setStelleRistorante(String stelleRistorante) {
+    public void setStelleRistorante(StelleRistorante stelleRistorante) {
         this.stelleRistorante = stelleRistorante;
     }
 
@@ -63,17 +64,10 @@ public class Ristorante {
     }
 
     //Corretta la funzione printOrdinazione, adesso stampa tutti i menù nella lista attraverso un ciclo for
-
-    //TODO far stampare solo il menù richiesto dal cliente
-    public void printOrdinazione() {
-        System.out.println(getNome());
+    public void printMenuScelto(Menu menu) {
+        System.out.println(getNome() + " " + getStelleRistorante().getVisual());
         System.out.println("A cura dello chef stellato : "+getChef());
         this.indirizzo.printIndirizzo();
-
-        for (Menu menu : menus) {
-
-            //aggiunto '.getColore()'
-            menu.printMenu(menu.getTipo().getColore());
-        }
+        menu.printMenu(menu.getTipo().getColore());
     }
 }
