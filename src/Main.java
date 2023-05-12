@@ -1,4 +1,4 @@
-import enumertion.StelleRistorante;
+import enumertion.StelleRistoranteEnum;
 import enumertion.TipoEnum;
 import portate.Bevanda;
 import portate.Dolce;
@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Menù a base di carne
-        Menu menuCarne = new Menu("Fragranza Carnivora", TipoEnum.CARNIVORO);
+        Menu menuCarne = new Menu("Fragranza Carnivora", TipoEnum.VEGETARIANO);
 
         PrimoPiatto garganelli = new PrimoPiatto("Garganelli con asparagi e prosciutto crudo", 14.50, 265);
         PrimoPiatto risottoAsparagiESpeck = new PrimoPiatto("Risotto asparagi e speck", 12.69, 300);
@@ -21,7 +21,7 @@ public class Main {
         Dolce mousse = new Dolce("Mousse ai frutti di bosco", 5.5, "15");
         Dolce souffle = new Dolce("Soufflé di mango con crema di cocco e lime", 4.49, "19");
         Dolce tiramisu = new Dolce("Tiramisù", 6.99, "15");
-        Bevanda acquaMinerale = new Bevanda("Acqua minerale naturale o frizzante",2.00,0.0);
+        Bevanda acquaMinerale = new Bevanda("Acqua minerale naturale o frizzante", 2.00, 0.0);
         Bevanda cocaCola = new Bevanda("Coca cola", 4.0, 0.0);
         Bevanda birra = new Bevanda("Birra", 3.0, 4.75);
 
@@ -41,17 +41,17 @@ public class Main {
         //Menù a base di pesce
         Menu menuPesce = new Menu("Fantasie di Mare", TipoEnum.PESCE);
 
-        PrimoPiatto linguine =new PrimoPiatto("Linguine ai frutti di mare freschi",15.00,480);
-        PrimoPiatto risotto =new PrimoPiatto("Risotto Venere con zucchine e gamberi",13.00,137);
-        PrimoPiatto paccheri=new PrimoPiatto("Paccheri al sugo di calamari",14.00,370);
-        SecondoPiatto orata = new SecondoPiatto("Orata al cartoccio",16.50,450.0, TipoEnum.PESCE);
-        SecondoPiatto involtiniSpada = new SecondoPiatto("Involtini di pesce spada e melanzane",13.50,200.0, TipoEnum.PESCE);
-        SecondoPiatto filettoCernia = new SecondoPiatto("Filetto di cernia alla Mediterranea", 18.00,500.0, TipoEnum.PESCE);
-        Dolce sorbetto = new Dolce("Sorbetto al limone e menta fresca",4.50,"12");
-        Dolce sbriciolata= new Dolce("Sbriciolata alle fragole",5.00,"18");
-        Dolce pannaCaffe= new Dolce("Panna cotta al caffè e cioccolato",5.00,"15");
-        Bevanda vinoChard = new Bevanda("Vino bianco Chardonnay del Salento ",13.00,13.0);
-        Bevanda limonata = new Bevanda("Aperitivo analcolico al limone",3.50,0.0);
+        PrimoPiatto linguine = new PrimoPiatto("Linguine ai frutti di mare freschi", 15.00, 480);
+        PrimoPiatto risotto = new PrimoPiatto("Risotto Venere con zucchine e gamberi", 13.00, 137);
+        PrimoPiatto paccheri = new PrimoPiatto("Paccheri al sugo di calamari", 14.00, 370);
+        SecondoPiatto orata = new SecondoPiatto("Orata al cartoccio", 16.50, 450.0, TipoEnum.PESCE);
+        SecondoPiatto involtiniSpada = new SecondoPiatto("Involtini di pesce spada e melanzane", 13.50, 200.0, TipoEnum.PESCE);
+        SecondoPiatto filettoCernia = new SecondoPiatto("Filetto di cernia alla Mediterranea", 18.00, 500.0, TipoEnum.PESCE);
+        Dolce sorbetto = new Dolce("Sorbetto al limone e menta fresca", 4.50, "12");
+        Dolce sbriciolata = new Dolce("Sbriciolata alle fragole", 5.00, "18");
+        Dolce pannaCaffe = new Dolce("Panna cotta al caffè e cioccolato", 5.00, "15");
+        Bevanda vinoChard = new Bevanda("Vino bianco Chardonnay del Salento ", 13.00, 13.0);
+        Bevanda limonata = new Bevanda("Aperitivo analcolico al limone", 3.50, 0.0);
 
         menuPesce.addPortata(linguine);
         menuPesce.addPortata(risotto);
@@ -94,12 +94,15 @@ public class Main {
         menuVeggi.addPortata(birra);
 
         //Chiamata del ristorante
-        Ristorante ristorante = new Ristorante("Team5 Restaurant","Mario Astori", StelleRistorante.DUE_STELLE,new Indirizzo("Via Genova Thaon di Revel", "Milano", 3, 20159, "Milano", ""));
+        Ristorante ristorante = new Ristorante("Team5 Restaurant", "Mario Astori",
+                StelleRistoranteEnum.DUE_STELLE, new Indirizzo("Via Genova Thaon di Revel",
+                "Milano", 3, 20159, "Milano", ""));
 
         ristorante.addMenu(menuCarne);
         ristorante.addMenu(menuPesce);
         ristorante.addMenu(menuVeggi);
 
-        ristorante.printMenuScelto(menuCarne);
+        //TODO sistemare
+        ristorante.printMenuScelto();
     }
 }
