@@ -1,6 +1,6 @@
 package enumertion;
 
-public enum TipoRistoranteEnum {
+public enum TipoEnum {
 
     CARNIVORO("Carnivoro", "Menù di tipo carnivoro", ColorEnum.BG_GIALLO),
     VEGETARIANO("Vegetariano", "Menù di tipo vegetariano", ColorEnum.BG_VERDE),
@@ -10,7 +10,7 @@ public enum TipoRistoranteEnum {
     private final String descrizione;
     private final ColorEnum colore;
 
-    TipoRistoranteEnum(String nome, String descrizione, ColorEnum colore) {
+    TipoEnum(String nome, String descrizione, ColorEnum colore) {
         this.nome = nome;
         this.descrizione = descrizione;
         this.colore = colore;

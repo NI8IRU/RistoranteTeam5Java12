@@ -1,14 +1,17 @@
 package portate;
 
+import enumertion.OrdinatoreEnum;
+
 public abstract class Portata {
     private String nome;
     private Double prezzo;
 
-    private int ordinatore;
+    private OrdinatoreEnum ordinatore;
 
-    public Portata(String nome, Double prezzo) {
+    public Portata(String nome, Double prezzo,OrdinatoreEnum ordinatore) {
         this.nome = nome;
         this.prezzo = prezzo;
+        this.ordinatore = ordinatore;
     }
 
     public String getNome() {
@@ -27,7 +30,9 @@ public abstract class Portata {
         this.prezzo = prezzo;
     }
 
-    public abstract int getOrdinatore();
+    public OrdinatoreEnum getOrdinatore(){
+        return ordinatore;
+    };
 
     public void printPortata() {
         System.out.println("  " + nome + ": " + prezzo + "€");

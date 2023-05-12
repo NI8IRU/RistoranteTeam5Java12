@@ -4,13 +4,12 @@ import enumertion.OrdinatoreEnum;
 
 public class PrimoPiatto extends Portata {
     private Integer kcalPerEtto;
-    private final int ordinatore;
 
     public PrimoPiatto(String nome, Double prezzo, Integer kcalPerEtto) {
-        super(nome, prezzo);
+        //messo il valore dell'ordinatore nel super!
+        super(nome, prezzo, OrdinatoreEnum.PRIMA_POSIZIONE);
         this.kcalPerEtto = kcalPerEtto;
-        //dato il valore dell'enum
-        this.ordinatore = OrdinatoreEnum.PRIMA_POSIZIONE.getPosizionePortataSulMenu();
+
     }
 
     public Integer getKcalPerEtto() {
@@ -21,10 +20,6 @@ public class PrimoPiatto extends Portata {
         this.kcalPerEtto = kcalPerEtto;
     }
 
-    @Override
-    public int getOrdinatore() {
-        return ordinatore;
-    }
 
     @Override
     public void printPortata() {

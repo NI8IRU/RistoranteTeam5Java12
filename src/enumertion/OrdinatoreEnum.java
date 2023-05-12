@@ -10,6 +10,10 @@ public enum OrdinatoreEnum {
     QUARTA_POSIZIONE(4);
 
     //field privato e finale
+    /**
+     *
+     */
+    //TODO utilizzare l'integer, quindi sempre oggetti
     private final int posizionePortataSulMenu;
 
     //messo il field di prima dentro il costruttore

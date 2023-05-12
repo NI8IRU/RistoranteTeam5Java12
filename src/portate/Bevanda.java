@@ -4,14 +4,13 @@ import enumertion.OrdinatoreEnum;
 
 public class Bevanda extends Portata {
     private Double percentAlcol;
-    private final int ordinatore;
 
-    //TODO inserire enumerato
+
     public Bevanda(String nome, Double prezzo, Double percentAlcol) {
-        super(nome, prezzo);
+        //messo il valore dell'ordinatore nel super!
+        super(nome, prezzo, OrdinatoreEnum.QUARTA_POSIZIONE);
         this.percentAlcol = percentAlcol;
-        //dato il valore dell'enum
-        this.ordinatore = OrdinatoreEnum.QUARTA_POSIZIONE.getPosizionePortataSulMenu();
+
     }
 
     public void setPercentAlcol(Double percentAlcol) {
@@ -22,11 +21,6 @@ public class Bevanda extends Portata {
         return percentAlcol;
     }
 
-
-    @Override
-    public int getOrdinatore() {
-        return ordinatore;
-    }
 
     @Override
     public void printPortata() {
