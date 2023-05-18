@@ -3,7 +3,6 @@ import enumertion.TipoEnum;
 import portate.Bevanda;
 import portate.Dolce;
 import portate.portatePrincipali.PortataCarne;
-import portate.portatePrincipali.PortataPesce;
 
 public class Main {
 
@@ -28,5 +27,7 @@ public class Main {
 
         //TODO sistemare
         ristorante.printMenuScelto(TipoEnum.CARNIVORO);
+
+        DataBaseConnection.init();
     }
 }
