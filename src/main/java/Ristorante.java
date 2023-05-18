@@ -1,3 +1,4 @@
+import enumertion.ColorEnum;
 import enumertion.StelleRistoranteEnum;
 import enumertion.TipoEnum;
 
@@ -65,16 +66,14 @@ public class Ristorante {
     }
 
     //Corretta la funzione printOrdinazione, adesso stampa tutti i menù nella lista attraverso un ciclo for
-    public void printMenuScelto(TipoEnum tipoEnum) {
+    public void printMenuScelto(ColorEnum coloreEnum) {
         System.out.println(getNome() + " " + getStelleRistorante().getVisual() + "\n"
                 + getStelleRistorante().getDescrizione());
         System.out.println("A cura dello chef stellato : "+getChef());
         this.indirizzo.printIndirizzo();
         for (Menu menu: menus) {
-            if(menu.getTipo() == tipoEnum){
-                menu.printMenu(tipoEnum.getColore());
-            }
-
+            menu.printMenu(coloreEnum);
         }
+
     }
 }

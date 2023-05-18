@@ -1,3 +1,4 @@
+import enumertion.ColorEnum;
 import enumertion.StelleRistoranteEnum;
 import enumertion.TipoEnum;
 import portate.Bevanda;
@@ -26,7 +27,7 @@ public class Main {
         ristorante.addMenu(menuCarne);
 
         //TODO sistemare
-        ristorante.printMenuScelto(TipoEnum.CARNIVORO);
+        ristorante.printMenuScelto(ColorEnum.BG_VIOLA);
 
         DataBaseConnection.init();
     }

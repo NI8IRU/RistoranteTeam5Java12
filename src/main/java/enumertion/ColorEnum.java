@@ -2,30 +2,31 @@ package enumertion;
 
 public enum ColorEnum {
 
-    //ENUM per aggiungere colori alle stringhe
-    // RESET da utilizzare per interrompere la colorazione delle stringhe
-    //TODO  sistemare questo enum inserendo la descrizione
+   /*
+    Enumerati per la personalizzazione estetica del menù
+     */
 
-    //TODO inserire un campo descrizione per capire cosa fa questo comando: sfondo blu ecc ecc
-    RESET("\033[0m"),
-    BLU("\u001B[34m"),
-    CIANO("\u001B[36m"),
-    VIOLA("\033[0;35m"),
-    GIALLO("\u001B[33m"),
-    NERO("\u001B[30m"),
+    RESET("\033[0m", "Interrompe il colore delle stringhe "),
+    BLU("\u001B[34m", "Colora i caratteri di blu"),
+    CIANO("\u001B[36m", "Colora i caratteri di ciano"),
+    VIOLA("\033[0;35m", "Colora i caratteri di viola"),
+    GIALLO("\u001B[33m", "Colora i caratteri di giallo"),
+    NERO("\u001B[30m", "Colora i caratteri di nero"),
 
-    // ENUM background colorato
-    BG_ROSSO("\u001B[41m"),
-    BG_VERDE("\u001B[42m"),
-    BG_GIALLO("\u001B[43m"),
-    BG_CIANO("\u001B[46m"),
-    BG_VIOLA("\u001B[45m"),
-    BG_BIANCO("\u001B[47m");
+    BG_ROSSO("\u001B[41m", "Colora il background delle stringhe di rosso"),
+    BG_VERDE("\u001B[42m", "Colora il background delle stringhe di verde"),
+    BG_GIALLO("\u001B[43m", "Colora il background delle stringhe di giallo"),
+    BG_CIANO("\u001B[46m", "Colora il background delle stringhe di ciano"),
+    BG_VIOLA("\u001B[45m", "Colora il background delle stringhe di viola"),
+    BG_BIANCO("\u001B[47m", "Colora il background delle stringhe di bianco");
 
     private final String ansiCode;
+    private final String descrizione;
 
-    ColorEnum(String ansiCode) {
+
+    ColorEnum(String ansiCode, String descrizione) {
         this.ansiCode = ansiCode;
+        this.descrizione = descrizione;
     }
 
     public String getAnsiCode() {
