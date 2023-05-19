@@ -10,10 +10,11 @@ public abstract class Portata {
 
     private OrdinatoreEnum ordinatore;
 
-    public Portata(String nome, Double prezzo,OrdinatoreEnum ordinatore) {
+    public Portata(String nome, Double prezzo,OrdinatoreEnum ordinatore, TipoEnum tipoEnum) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.ordinatore = ordinatore;
+        this.tipoEnum = tipoEnum;
     }
 
     public String getNome() {

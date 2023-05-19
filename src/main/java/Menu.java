@@ -9,11 +9,12 @@ import java.util.List;
 public class Menu {
     private String nome;
 
-
+    private TipoEnum tipoEnum;
     private final List<Portata> portate;
 
-    public Menu(String nome) {
+    public Menu(String nome,TipoEnum tipoEnum) {
         this.nome = nome;
+        this.tipoEnum = tipoEnum;
         this.portate = new ArrayList<>();
     }
 
@@ -26,7 +27,11 @@ public class Menu {
     }
 
     public void addPortata(Portata portata) {
-        portate.add(portata);
+
+        if (portata.getTipoEnum() == this.tipoEnum){
+            portate.add(portata);
+        }
+
         portate.sort((u1, u2) -> {
             if (u1.getPrezzo().equals(u2.getPrezzo()))
                 return 0;

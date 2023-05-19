@@ -14,7 +14,7 @@ public class Main {
         Dolce dolce = new Dolce("Dolce", 4.0, 30.0);
         Bevanda bevanda = new Bevanda("Bevanda", 2.0, 0.0);
 
-        Menu menuCarne = new Menu("Menù Carnivoro");
+        Menu menuCarne = new Menu("Menù Carnivoro", TipoEnum.CARNIVORO);
         menuCarne.addPortata(portataCarne);
         menuCarne.addPortata(dolce);
         menuCarne.addPortata(bevanda);
