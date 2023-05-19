@@ -26,7 +26,7 @@ public class Main {
 
         ristorante.addMenu(menuCarne);
 
-        //TODO sistemare
+        
         ristorante.printMenuScelto(ColorEnum.BG_VIOLA);
 
         DataBaseConnection.init();

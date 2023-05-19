@@ -64,26 +64,25 @@ public class Menu {
         return (double) Math.round(prezzo * 100) / 100;
     }
 
-    //TODO sistemare
-    //Regolarizzata la nuova funzione printMenu, rimane solo da abbellire la formattazione del testo
+
+    //Regolarizzata la funzione printMenu, rimane solo da abbellire la formattazione del testo
 //    public void printMenu() {
-//        System.out.println(tipo.getDescrizione() + "\n");
+//
+//        System.out.println(portate.get(0).getTipoEnum().getDescrizione() + "\n");
 //        System.out.println("\n PRIMI \n");
-//        portate.stream().filter(primo -> primo.getOrdinatore().equals(OrdinatoreEnum.PRIMA_POSIZIONE.getPosizionePortataSulMenu())).forEach(Portata::printPortata);
-//        System.out.println("\n SECONDI \n");
-//        portate.stream().filter(secondo -> secondo.getOrdinatore().equals(OrdinatoreEnum.SECONDA_POSIZIONE.getPosizionePortataSulMenu())).forEach(Portata::printPortata);
-//        System.out.println("\n DESSERT \n");
-//        portate.stream().filter(dessert -> dessert.getOrdinatore().equals(OrdinatoreEnum.TERZA_POSIZIONE.getPosizionePortataSulMenu())).forEach(Portata::printPortata);
+//        portate.stream().filter(primo -> primo.getOrdinatore().equals(OrdinatoreEnum.PRIMA_POSIZIONE)).forEach(Portata::printPortata);
+//        System.out.println("\n DOLCE \n");
+//        portate.stream().filter(secondo -> secondo.getOrdinatore().equals(OrdinatoreEnum.SECONDA_POSIZIONE)).forEach(Portata::printPortata);
 //        System.out.println("\n BEVANDE \n");
-//        portate.stream().filter(bevanda -> bevanda.getOrdinatore().equals(OrdinatoreEnum.QUARTA_POSIZIONE.getPosizionePortataSulMenu())).forEach(Portata::printPortata);
-//        System.out.println("\n BUON APPETITO!!!");
+//        portate.stream().filter(bevanda -> bevanda.getOrdinatore().equals(OrdinatoreEnum.TERZA_POSIZIONE)).forEach(Portata::printPortata);
 //    }
 
-    //TODO rivediamo
+
     //Overload della funzione printMenu
-//Questo metodo stampa i menù colorati in base al tipo
+   //Questo metodo stampa i menù colorati - !
+
     public void printMenu(ColorEnum colorEnum) {
-        //TODO rivediamo il passaggio di oggetti e come possiamo usare questo metodo
+
         System.out.println(colorEnum.getAnsiCode());
         System.out.println(ColorEnum.NERO.getAnsiCode());
         System.out.println(portate.get(0).getTipoEnum().getDescrizione() + "\n");
