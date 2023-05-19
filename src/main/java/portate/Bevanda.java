@@ -8,7 +8,7 @@ public class Bevanda extends Portata {
 
     public Bevanda(String nome, Double prezzo, Double percentAlcol) {
         //messo il valore dell'ordinatore nel super!
-        super(nome, prezzo, OrdinatoreEnum.QUARTA_POSIZIONE);
+        super(nome, prezzo, OrdinatoreEnum.TERZA_POSIZIONE);
         this.percentAlcol = percentAlcol;
 
     }

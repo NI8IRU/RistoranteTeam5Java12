@@ -1,10 +1,12 @@
 package portate;
 
 import enumertion.OrdinatoreEnum;
+import enumertion.TipoEnum;
 
 public abstract class Portata {
     private String nome;
     private Double prezzo;
+    private TipoEnum tipoEnum;
 
     private OrdinatoreEnum ordinatore;
 
@@ -33,6 +35,10 @@ public abstract class Portata {
     public OrdinatoreEnum getOrdinatore(){
         return ordinatore;
     };
+
+    public TipoEnum getTipoEnum() {
+        return tipoEnum;
+    }
 
     public void printPortata() {
         System.out.println("  " + nome + ": " + prezzo + "€");
