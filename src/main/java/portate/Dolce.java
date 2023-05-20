@@ -1,19 +1,15 @@
 package portate;
 
 import enumertion.OrdinatoreEnum;
+import enumertion.TipoEnum;
 
 //cambiato nome- messo al singolare!
 public class Dolce extends Portata {
     private Double perZuccheri;
 
-    /**
-     * @param nome
-     * @param prezzo
-     * @param perZuccheri
-     */
     public Dolce(String nome, Double prezzo, Double perZuccheri) {
         //messo il valore dell'ordinatore nel super!
-        super(nome, prezzo, OrdinatoreEnum.SECONDA_POSIZIONE);
+        super(nome, prezzo, TipoEnum.ALL, OrdinatoreEnum.SECONDA_POSIZIONE);
         this.perZuccheri = perZuccheri;
 
     }

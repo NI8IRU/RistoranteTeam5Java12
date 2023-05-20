@@ -3,19 +3,18 @@ import enumertion.StelleRistoranteEnum;
 import enumertion.TipoEnum;
 import portate.Bevanda;
 import portate.Dolce;
-import portate.portatePrincipali.PortataCarne;
 
 public class Main {
 
     public static void main(String[] args) {
 
         //Menù test
-        PortataCarne portataCarne = new PortataCarne("Carne", 10.0, 200);
+
         Dolce dolce = new Dolce("Dolce", 4.0, 30.0);
         Bevanda bevanda = new Bevanda("Bevanda", 2.0, 0.0);
 
         Menu menuCarne = new Menu("Menù Carnivoro", TipoEnum.CARNIVORO);
-        menuCarne.addPortata(portataCarne);
+
         menuCarne.addPortata(dolce);
         menuCarne.addPortata(bevanda);
 
@@ -26,9 +25,5 @@ public class Main {
 
         ristorante.addMenu(menuCarne);
 
-        
-        ristorante.printMenuScelto(ColorEnum.BG_VIOLA);
-
-        DataBaseConnection.init();
     }
 }

@@ -6,15 +6,15 @@ import enumertion.TipoEnum;
 public abstract class Portata {
     private String nome;
     private Double prezzo;
-    private TipoEnum tipoEnum;
+    private final TipoEnum tipoEnum;
 
-    private OrdinatoreEnum ordinatore;
+    private final OrdinatoreEnum ordinatore;
 
-    public Portata(String nome, Double prezzo,OrdinatoreEnum ordinatore, TipoEnum tipoEnum) {
+    public Portata(String nome, Double prezzo, TipoEnum tipoEnum, OrdinatoreEnum ordinatore) {
         this.nome = nome;
         this.prezzo = prezzo;
-        this.ordinatore = ordinatore;
         this.tipoEnum = tipoEnum;
+        this.ordinatore = ordinatore;
     }
 
     public String getNome() {

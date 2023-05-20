@@ -4,7 +4,8 @@ public enum TipoEnum {
 
     CARNIVORO("Carnivoro", "Menù di tipo carnivoro"),
     VEGETARIANO("Vegetariano", "Menù di tipo vegetariano"),
-    PESCE("Pesce", "Menù a base di pesce");
+    PESCE("Pesce", "Menù a base di pesce"),
+    ALL("Tutti i tipi", "Adatto a tutti i tipi di menù");
 
     private final String nome;
     private final String descrizione;

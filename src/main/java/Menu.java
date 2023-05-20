@@ -71,16 +71,18 @@ public class Menu {
 
 
     //Regolarizzata la funzione printMenu, rimane solo da abbellire la formattazione del testo
-//    public void printMenu() {
-//
-//        System.out.println(portate.get(0).getTipoEnum().getDescrizione() + "\n");
-//        System.out.println("\n PRIMI \n");
-//        portate.stream().filter(primo -> primo.getOrdinatore().equals(OrdinatoreEnum.PRIMA_POSIZIONE)).forEach(Portata::printPortata);
-//        System.out.println("\n DOLCE \n");
-//        portate.stream().filter(secondo -> secondo.getOrdinatore().equals(OrdinatoreEnum.SECONDA_POSIZIONE)).forEach(Portata::printPortata);
-//        System.out.println("\n BEVANDE \n");
-//        portate.stream().filter(bevanda -> bevanda.getOrdinatore().equals(OrdinatoreEnum.TERZA_POSIZIONE)).forEach(Portata::printPortata);
-//    }
+    public void printMenu() {
+
+        System.out.println(portate.get(0).getTipoEnum().getDescrizione() + "\n");
+        System.out.println("\n PRIMI \n");
+        portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE).forEach(Portata::printPortata);
+        System.out.println("\n SECONDI \n");
+        portate.stream().filter(secondo -> secondo.getOrdinatore() == OrdinatoreEnum.SECONDA_POSIZIONE).forEach(Portata::printPortata);
+        System.out.println("\n DOLCE \n");
+        portate.stream().filter(dolce -> dolce.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE).forEach(Portata::printPortata);
+        System.out.println("\n BEVANDE \n");
+        portate.stream().filter(bevanda -> bevanda.getOrdinatore() == OrdinatoreEnum.QUARTA_POSIZIONE).forEach(Portata::printPortata);
+    }
 
 
     //Overload della funzione printMenu
@@ -93,10 +95,12 @@ public class Menu {
         System.out.println(portate.get(0).getTipoEnum().getDescrizione() + "\n");
         System.out.println("\n PRIMI \n");
         portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE).forEach(Portata::printPortata);
-        System.out.println("\n DOLCE \n");
+        System.out.println("\n SECONDI \n");
         portate.stream().filter(secondo -> secondo.getOrdinatore() == OrdinatoreEnum.SECONDA_POSIZIONE).forEach(Portata::printPortata);
+        System.out.println("\n DOLCE \n");
+        portate.stream().filter(dolce -> dolce.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE).forEach(Portata::printPortata);
         System.out.println("\n BEVANDE \n");
-        portate.stream().filter(bevanda -> bevanda.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE).forEach(Portata::printPortata);
+        portate.stream().filter(bevanda -> bevanda.getOrdinatore() == OrdinatoreEnum.QUARTA_POSIZIONE).forEach(Portata::printPortata);
         System.out.println(ColorEnum.RESET.getAnsiCode());
     }
 }
