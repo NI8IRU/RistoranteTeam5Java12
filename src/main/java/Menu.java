@@ -12,7 +12,7 @@ public class Menu {
     private TipoEnum tipoEnum;
     private final List<Portata> portate;
 
-    public Menu(String nome,TipoEnum tipoEnum) {
+    public Menu(String nome, TipoEnum tipoEnum) {
         this.nome = nome;
         this.tipoEnum = tipoEnum;
         this.portate = new ArrayList<>();
@@ -28,7 +28,7 @@ public class Menu {
 
     public void addPortata(Portata portata) {
 
-        if (portata.getTipoEnum() == this.tipoEnum || portata.getTipoEnum() == TipoEnum.ALL){
+        if (portata.getTipoEnum() == this.tipoEnum || portata.getTipoEnum() == TipoEnum.ALL) {
             portate.add(portata);
         }
 
@@ -46,11 +46,11 @@ public class Menu {
 
     public void removePortata(Portata portata) {
 
-        if (portata.getTipoEnum() == this.tipoEnum || portata.getTipoEnum() == TipoEnum.ALL){
-            portate.add(portata);
+        if (portata.getTipoEnum() == this.tipoEnum || portata.getTipoEnum() == TipoEnum.ALL) {
+            portate.remove(portata);
         }
 
-        portate.remove(portata);
+
         portate.sort((u1, u2) -> {
             if (u1.getPrezzo().equals(u2.getPrezzo()))
                 return 0;
@@ -62,6 +62,7 @@ public class Menu {
             return u1.getOrdinatore().getPosizionePortataSulMenu() < u2.getOrdinatore().getPosizionePortataSulMenu() ? -1 : 1;
         });
     }
+
     public TipoEnum getTipo() {
         return portate.get(0).getTipoEnum();
     }
@@ -91,7 +92,7 @@ public class Menu {
 
 
     //Overload della funzione printMenu
-   //Questo metodo stampa i menù colorati - !
+    //Questo metodo stampa i menù colorati - !
 
     public void printMenu(ColorEnum colorEnum) {
 
