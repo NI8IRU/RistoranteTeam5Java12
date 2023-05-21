@@ -28,7 +28,7 @@ public class Menu {
 
     public void addPortata(Portata portata) {
 
-        if (portata.getTipoEnum() == this.tipoEnum){
+        if (portata.getTipoEnum() == this.tipoEnum || portata.getTipoEnum() == TipoEnum.ALL){
             portate.add(portata);
         }
 
@@ -45,6 +45,11 @@ public class Menu {
     }
 
     public void removePortata(Portata portata) {
+
+        if (portata.getTipoEnum() == this.tipoEnum || portata.getTipoEnum() == TipoEnum.ALL){
+            portate.add(portata);
+        }
+
         portate.remove(portata);
         portate.sort((u1, u2) -> {
             if (u1.getPrezzo().equals(u2.getPrezzo()))

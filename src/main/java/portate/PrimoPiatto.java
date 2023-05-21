@@ -2,15 +2,16 @@ package portate;
 
 
 import enumertion.OrdinatoreEnum;
+import enumertion.TipoEnum;
 
 
 public class PrimoPiatto extends Portata {
     private Integer kcalPerEtto;
 
 
-    public PrimoPiatto(String nome, Double prezzo, Integer kcalPerEtto) {
+    public PrimoPiatto(String nome, Double prezzo, Integer kcalPerEtto, TipoEnum tipoEnum) {
         //messo il valore dell'ordinatore nel super!
-        super(nome, prezzo, OrdinatoreEnum.PRIMA_POSIZIONE);
+        super(nome, prezzo, tipoEnum, OrdinatoreEnum.PRIMA_POSIZIONE);
         this.kcalPerEtto = kcalPerEtto;
 
     }
@@ -38,7 +39,7 @@ public class PrimoPiatto extends Portata {
      */
     @Override
     public void printPortata() {
-        System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
-                + " \n  " + getKcalPerEtto() + "kcal (presenti per etto); \n");
+        System.out.println("  " + getNome() + ": " + getPrezzo() + "€"
+                + " \n  " + kcalPerEtto + "kcal (presenti per etto); \n");
     }
 }

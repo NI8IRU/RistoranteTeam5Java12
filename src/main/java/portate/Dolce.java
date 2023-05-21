@@ -9,7 +9,7 @@ public class Dolce extends Portata {
 
     public Dolce(String nome, Double prezzo, Double perZuccheri) {
         //messo il valore dell'ordinatore nel super!
-        super(nome, prezzo, TipoEnum.ALL, OrdinatoreEnum.SECONDA_POSIZIONE);
+        super(nome, prezzo, TipoEnum.ALL, OrdinatoreEnum.TERZA_POSIZIONE);
         this.perZuccheri = perZuccheri;
 
     }
@@ -30,7 +30,7 @@ public class Dolce extends Portata {
      */
     @Override
     public void printPortata() {
-        System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
+        System.out.println("  " + getNome() + ": " + getPrezzo() + "€"
                 + " \n  zuccheri presenti al: " + getPerZuccheri() + "%\n");
     }
 }

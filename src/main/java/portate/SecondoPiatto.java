@@ -5,18 +5,15 @@ import enumertion.TipoEnum;
 
     public class SecondoPiatto extends Portata {
 
-        private TipoEnum tipo;
-
         /**
          * pesoPiatto farà riferimento alla grammatura dei piatti
          */
         private Double pesoPiatto;
 
-        public SecondoPiatto(String nome, Double prezzo, Double pesoPiatto, TipoEnum tipo) {
+        public SecondoPiatto(String nome, Double prezzo, Double pesoPiatto, TipoEnum tipoEnum) {
 
-            super(nome, prezzo, OrdinatoreEnum.SECONDA_POSIZIONE);
+            super(nome, prezzo, tipoEnum, OrdinatoreEnum.SECONDA_POSIZIONE);
             this.pesoPiatto = pesoPiatto;
-            this.tipo = tipo;
         }
 
         public Double getPesoPiatto() {
@@ -34,13 +31,15 @@ import enumertion.TipoEnum;
         @Override
         public void printPortata() {
 
-            switch (tipo) {
-                case CARNIVORO -> System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
-                        + " \n  peso della carne: " + getPesoPiatto() + "g \n");
-                case PESCE -> System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
+            switch (getTipoEnum()) {
+                case CARNIVORO -> System.out.println("  " + getNome() + ": " + getPrezzo() + "€"
+                        + " \n  grammatura della carne: " + getPesoPiatto() + "g \n");
+                case PESCE -> System.out.println("  " + getNome() + ": " + getPrezzo() + "€"
                         + " \n  peso del pesce: " + getPesoPiatto() + "g \n");
-                case VEGETARIANO -> System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
-                        + " \n  grammatura dal piatto: " + getPesoPiatto() + "g \n");
+                case VEGETARIANO -> System.out.println("  " + getNome() + ": " + getPrezzo() + "€"
+                        + " \n  grammatura del piatto: " + getPesoPiatto() + "g \n");
+                default -> System.out.println("  " + getNome() + ": " + getPrezzo() + "€"
+                        + " \n  peso del piatto: " + getPesoPiatto() + "g \n");
             }
 
         }
