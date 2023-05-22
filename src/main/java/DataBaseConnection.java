@@ -3,11 +3,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class DataBaseConnection extends Menu{
-
-    public DataBaseConnection(String nome) {
-        super(nome);
-    }
+public class DataBaseConnection{
 
     public static void init() {
         try {

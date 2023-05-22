@@ -1,6 +1,7 @@
 package portate;
 
 import enumertion.OrdinatoreEnum;
+import enumertion.TipoEnum;
 
 public class Bevanda extends Portata {
     private Double percentAlcol;
@@ -8,7 +9,7 @@ public class Bevanda extends Portata {
 
     public Bevanda(String nome, Double prezzo, Double percentAlcol) {
         //messo il valore dell'ordinatore nel super!
-        super(nome, prezzo, OrdinatoreEnum.TERZA_POSIZIONE);
+        super(nome, prezzo, TipoEnum.ALL, OrdinatoreEnum.QUARTA_POSIZIONE);
         this.percentAlcol = percentAlcol;
 
     }
@@ -24,7 +25,7 @@ public class Bevanda extends Portata {
 
     @Override
     public void printPortata() {
-        System.out.println("  " + super.getNome() + ": " + super.getPrezzo() + "€"
+        System.out.println("  " + getNome() + ": " + getPrezzo() + "€"
                 + " \n  alcool: " + getPercentAlcol() + "%\n");
     }
 }
