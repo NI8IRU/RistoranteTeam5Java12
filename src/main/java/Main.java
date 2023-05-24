@@ -1,3 +1,4 @@
+import database.BevandaDAO;
 import enumertion.ColorEnum;
 import enumertion.StelleRistoranteEnum;
 import enumertion.TipoEnum;
@@ -5,6 +6,9 @@ import portate.Bevanda;
 import portate.Dolce;
 import portate.PrimoPiatto;
 import portate.SecondoPiatto;
+import ristorante.Indirizzo;
+import ristorante.Menu;
+import ristorante.Ristorante;
 
 public class Main {
 
@@ -103,9 +107,12 @@ public class Main {
         ristorante.addMenu(menuPesce);
         ristorante.addMenu(menuVeggi);
 
-        ristorante.printMenuScelto(ColorEnum.BG_BIANCO);
+//        ristorante.printMenuScelto(ColorEnum.BG_BIANCO);
 
-        DataBaseConnection.init();
+        BevandaDAO bevandaDAO = new BevandaDAO();
+        for (Bevanda bevanda : bevandaDAO.findAll()) {
+            bevanda.printPortata();
+        }
 
     }
 }

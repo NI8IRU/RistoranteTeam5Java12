@@ -1,6 +1,7 @@
+package ristorante;
+
 import enumertion.ColorEnum;
 import enumertion.StelleRistoranteEnum;
-import enumertion.TipoEnum;
 
 import java.util.ArrayList;
 import java.util.List;

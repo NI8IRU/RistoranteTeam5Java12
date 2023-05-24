@@ -6,6 +6,6 @@ TASK DELLA SETTIMANA: GENERALIZZARE IL CODICE
 
 -Sistemare Enum "enumertion.TipoEnum"
 
--Inserire un metodo nella classe Menu che stampa il menù
+-Inserire un metodo nella classe ristorante.Menu che stampa il menù
 
-{-BONUS: Creare classe padre "Menu" che contiene più menù}
+{-BONUS: Creare classe padre "ristorante.Menu" che contiene più menù}

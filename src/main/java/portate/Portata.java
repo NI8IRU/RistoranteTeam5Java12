@@ -4,6 +4,7 @@ import enumertion.OrdinatoreEnum;
 import enumertion.TipoEnum;
 
 public abstract class Portata {
+    private int id;
     private String nome;
     private Double prezzo;
     private final TipoEnum tipoEnum;
@@ -39,6 +40,14 @@ public abstract class Portata {
 
     public TipoEnum getTipoEnum() {
         return tipoEnum;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void printPortata() {

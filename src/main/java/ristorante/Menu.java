@@ -1,3 +1,5 @@
+package ristorante;
+
 import enumertion.ColorEnum;
 import enumertion.OrdinatoreEnum;
 import enumertion.TipoEnum;
