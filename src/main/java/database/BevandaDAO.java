@@ -11,7 +11,7 @@ public class BevandaDAO implements PortataDAO<Bevanda>{
         private static final String PASSWORD = "password";
 
         @Override
-        public Bevanda findById(int id) {
+        public Bevanda findById(Integer id) {
             Bevanda bevanda = null;
             try (Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
                  PreparedStatement stmt = conn.prepareStatement("SELECT * FROM bevanda WHERE id = ?")) {
@@ -46,8 +46,7 @@ public class BevandaDAO implements PortataDAO<Bevanda>{
     @Override
     public void inserisci(Bevanda bevanda) {
             try (Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-                 PreparedStatement stmt = conn.prepareStatement("INSERT INTO bevanda (ID, NOME, PREZZO, PERCENTUALE_ALC) VALUES (?, ?, ?, ?)")) {
-                stmt.setInt(1, bevanda.getId());
+                 PreparedStatement stmt = conn.prepareStatement("INSERT INTO bevanda (NOME, PREZZO, PERCENTUALE_ALC) VALUES ( ?, ?, ?)")) {
                 stmt.setString(2, bevanda.getNome());
                 stmt.setDouble(3, bevanda.getPrezzo());
                 stmt.setDouble(4, bevanda.getPercentAlcol());
@@ -72,7 +71,7 @@ public class BevandaDAO implements PortataDAO<Bevanda>{
         }
 
         @Override
-        public void elimina(int id) {
+        public void elimina(Integer id) {
             try (Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
                  PreparedStatement stmt = conn.prepareStatement("DELETE FROM bevanda WHERE ID = ?")) {
                 stmt.setInt(1, id);

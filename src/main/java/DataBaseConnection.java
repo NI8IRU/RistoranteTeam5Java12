@@ -7,7 +7,7 @@ public class DataBaseConnection{
 
     public static void init() {
         try (Connection connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/portate", "root", "4KF4TwigVZ7mVx"
+                    "jdbc:mysql://localhost:3306/portate", "root", "password"
             );
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from bevande")){

@@ -17,9 +17,9 @@ public class Main {
         //Menù a base di carne
         Menu menuCarne = new Menu("Fragranza Carnivora", TipoEnum.CARNIVORO);
 
-        PrimoPiatto garganelli = new PrimoPiatto("Garganelli con asparagi e prosciutto crudo", 14.50, 265, TipoEnum.CARNIVORO);
-        PrimoPiatto risottoAsparagiESpeck = new PrimoPiatto("Risotto asparagi e speck", 12.69, 300, TipoEnum.CARNIVORO);
-        PrimoPiatto lasagnaAllaBolognese = new PrimoPiatto("Lasagna alla Bolognese", 17.80, 336, TipoEnum.CARNIVORO);
+        PrimoPiatto garganelli = new PrimoPiatto(TipoEnum.CARNIVORO, "Garganelli con asparagi e prosciutto crudo", 14.50, 265);
+        PrimoPiatto risottoAsparagiESpeck = new PrimoPiatto(TipoEnum.CARNIVORO,"Risotto asparagi e speck", 12.69, 300);
+        PrimoPiatto lasagnaAllaBolognese = new PrimoPiatto(TipoEnum.CARNIVORO, "Lasagna alla Bolognese", 17.80, 336);
         SecondoPiatto lonzaDiMaiale = new SecondoPiatto("Lonza di maiale in agrodolce con mele e prugne", 15.5, 150.0, TipoEnum.CARNIVORO);
         SecondoPiatto costolette = new SecondoPiatto("Costolette d’agnello panate con carciofi e pecorino", 17.63, 100.0, TipoEnum.CARNIVORO);
         SecondoPiatto polloEMandorle = new SecondoPiatto("Pollo alle mandorle", 16.5, 125.0, TipoEnum.CARNIVORO);
@@ -46,9 +46,9 @@ public class Main {
         //Menù a base di pesce
         Menu menuPesce = new Menu("Fantasie di Mare", TipoEnum.PESCE);
 
-        PrimoPiatto linguine = new PrimoPiatto("Linguine ai frutti di mare freschi", 15.00, 480, TipoEnum.PESCE);
-        PrimoPiatto risotto = new PrimoPiatto("Risotto Venere con zucchine e gamberi", 13.00, 137, TipoEnum.PESCE);
-        PrimoPiatto paccheri = new PrimoPiatto("Paccheri al sugo di calamari", 14.00, 370, TipoEnum.PESCE);
+        PrimoPiatto linguine = new PrimoPiatto(TipoEnum.PESCE, "Linguine ai frutti di mare freschi", 15.00, 480 );
+        PrimoPiatto risotto = new PrimoPiatto(TipoEnum.PESCE,"Risotto Venere con zucchine e gamberi", 13.00, 137);
+        PrimoPiatto paccheri = new PrimoPiatto(TipoEnum.PESCE, "Paccheri al sugo di calamari", 14.00, 370);
         SecondoPiatto orata = new SecondoPiatto("Orata al cartoccio", 16.50, 450.0, TipoEnum.PESCE);
         SecondoPiatto involtiniSpada = new SecondoPiatto("Involtini di pesce spada e melanzane", 13.50, 200.0, TipoEnum.PESCE);
         SecondoPiatto filettoCernia = new SecondoPiatto("Filetto di cernia alla Mediterranea", 18.00, 500.0, TipoEnum.PESCE);
@@ -74,9 +74,9 @@ public class Main {
         //Menù vegetariano
         Menu menuVeggi = new Menu("Il Verde Gusto", TipoEnum.VEGETARIANO);
 
-        PrimoPiatto tagliatelle = new PrimoPiatto("Tagliatelle all’ uovo con verdure scottate in salsa di soia", 12.00, 285, TipoEnum.VEGETARIANO);
-        PrimoPiatto orecchiette = new PrimoPiatto("Orecchiette con porcini e ricotta affumicata", 13.50, 340, TipoEnum.VEGETARIANO);
-        PrimoPiatto ravioli = new PrimoPiatto("Ravioli fritti ripieni con squacquerone ed erbette", 12.50, 410, TipoEnum.VEGETARIANO);
+        PrimoPiatto tagliatelle = new PrimoPiatto(TipoEnum.VEGETARIANO, "Tagliatelle all’ uovo con verdure scottate in salsa di soia", 12.00, 285 );
+        PrimoPiatto orecchiette = new PrimoPiatto(TipoEnum.VEGETARIANO, "Orecchiette con porcini e ricotta affumicata", 13.50, 340);
+        PrimoPiatto ravioli = new PrimoPiatto(TipoEnum.VEGETARIANO,"Ravioli fritti ripieni con squacquerone ed erbette", 12.50, 410);
         SecondoPiatto lenticchie = new SecondoPiatto("Lenticchie condite con latte di cocco", 10.00, 150.0, TipoEnum.VEGETARIANO);
         SecondoPiatto purea = new SecondoPiatto("Crema di patate allo zafferano", 9.50, 140.0, TipoEnum.VEGETARIANO);
         SecondoPiatto verdureCotte = new SecondoPiatto("Verdure cotte di stagione coperte con formaggio fresco", 12.00, 190.0, TipoEnum.VEGETARIANO);

@@ -9,7 +9,7 @@ public class PrimoPiatto extends Portata {
     private Integer kcalPerEtto;
 
 
-    public PrimoPiatto(String nome, Double prezzo, Integer kcalPerEtto, TipoEnum tipoEnum) {
+    public PrimoPiatto(TipoEnum tipoEnum, String nome, Double prezzo, Integer kcalPerEtto ) {
         //messo il valore dell'ordinatore nel super!
         super(nome, prezzo, tipoEnum, OrdinatoreEnum.PRIMA_POSIZIONE);
         this.kcalPerEtto = kcalPerEtto;
