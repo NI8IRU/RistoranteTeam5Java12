@@ -10,7 +10,7 @@ import enumertion.TipoEnum;
          */
         private Double pesoPiatto;
 
-        public SecondoPiatto(String nome, Double prezzo, Double pesoPiatto, TipoEnum tipoEnum) {
+        public SecondoPiatto(TipoEnum tipoEnum, String nome, Double prezzo, Double pesoPiatto) {
 
             super(nome, prezzo, tipoEnum, OrdinatoreEnum.SECONDA_POSIZIONE);
             this.pesoPiatto = pesoPiatto;

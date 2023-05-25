@@ -23,7 +23,7 @@ public class PrimoPiattoDAO implements  PortataDAO<PrimoPiatto>{
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                primoPiatto = new PrimoPiatto(rs.getString("TIPO_MENU"), rs.getString("NOME"), rs.getDouble("PREZZO"), rs.getInt("KCAL_PER_ETTO"));
+                primoPiatto = new PrimoPiatto(tipoPortata(rs), rs.getString("NOME"), rs.getDouble("PREZZO"), rs.getInt("KCAL_PER_ETTO"));
                 primoPiatto.setId(rs.getInt("ID"));
             }
         } catch (SQLException e) {
@@ -39,7 +39,7 @@ public class PrimoPiattoDAO implements  PortataDAO<PrimoPiatto>{
              Statement stmt = conn.createStatement()) {
             ResultSet rs = stmt.executeQuery("SELECT * FROM primopiatto");
             while (rs.next()) {
-                PrimoPiatto primoPiatto = new PrimoPiatto( rs.getString("TIPO_MENU"), rs.getString("NOME"), rs.getDouble("PREZZO"), rs.getInt("KCAL_PER_ETTO"));
+                PrimoPiatto primoPiatto = new PrimoPiatto( tipoPortata(rs), rs.getString("NOME"), rs.getDouble("PREZZO"), rs.getInt("KCAL_PER_ETTO"));
                 primoPiatto.setId(rs.getInt("ID"));
                 primiPiatti.add(primoPiatto);
             }
@@ -90,5 +90,14 @@ public class PrimoPiattoDAO implements  PortataDAO<PrimoPiatto>{
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private TipoEnum tipoPortata (ResultSet rs) throws SQLException {
+        return switch (rs.getString("TIPO_MENU")) {
+            case ("Carnivoro") -> TipoEnum.CARNIVORO;
+            case ("Pesce") -> TipoEnum.PESCE;
+            case ("Vegetariano") -> TipoEnum.VEGETARIANO;
+            default -> TipoEnum.ALL;
+        };
     }
 }
