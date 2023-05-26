@@ -1,4 +1,4 @@
-package enumertion;
+package enumeration;
 
 public enum ColorEnum {
 
@@ -21,12 +21,10 @@ public enum ColorEnum {
     BG_BIANCO("\u001B[47m", "Colora il background delle stringhe di bianco");
 
     private final String ansiCode;
-    private final String descrizione;
 
 
     ColorEnum(String ansiCode, String descrizione) {
         this.ansiCode = ansiCode;
-        this.descrizione = descrizione;
     }
 
     public String getAnsiCode() {

@@ -1,7 +1,7 @@
 package portate;
 
-import enumertion.OrdinatoreEnum;
-import enumertion.TipoEnum;
+import enumeration.OrdinatoreEnum;
+import enumeration.TipoEnum;
 
 public abstract class Portata {
     private int id;

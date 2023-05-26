@@ -1,7 +1,7 @@
 package portate;
 
-import enumertion.OrdinatoreEnum;
-import enumertion.TipoEnum;
+import enumeration.OrdinatoreEnum;
+import enumeration.TipoEnum;
 
 //cambiato nome- messo al singolare!
 public class Dolce extends Portata {

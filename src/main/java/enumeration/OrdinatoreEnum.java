@@ -1,4 +1,4 @@
-package enumertion;
+package enumeration;
 
    //creato un enum per l'ordinatore,
    // così da poter ordinare le portate sul menù

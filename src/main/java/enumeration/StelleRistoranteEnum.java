@@ -1,4 +1,4 @@
-package enumertion;
+package enumeration;
 
 public enum StelleRistoranteEnum {
     UNA_STELLA("★", "Cucina molto buona nella sua categoria."),

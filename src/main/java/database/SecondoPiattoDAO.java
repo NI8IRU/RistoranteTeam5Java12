@@ -1,6 +1,6 @@
 package database;
 
-import enumertion.TipoEnum;
+import enumeration.TipoEnum;
 import portate.SecondoPiatto;
 
 import java.sql.*;
@@ -22,7 +22,7 @@ public class SecondoPiattoDAO implements  PortataDAO<SecondoPiatto>{
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                secondoPiatto = new SecondoPiatto(tipoPortata(rs), rs.getString("NOME"), rs.getDouble("PREZZO"), rs.getDouble("PESO_PIATTO"));
+                secondoPiatto = new SecondoPiatto(tipoPortata(rs), rs.getString("NOME_PIATTO"), rs.getDouble("PREZZO"), rs.getDouble("PESO_PIATTO"));
                 secondoPiatto.setId(rs.getInt("ID"));
             }
         } catch (SQLException e) {
@@ -38,7 +38,7 @@ public class SecondoPiattoDAO implements  PortataDAO<SecondoPiatto>{
              Statement stmt = conn.createStatement()) {
             ResultSet rs = stmt.executeQuery("SELECT * FROM secondopiatto");
             while (rs.next()) {
-                SecondoPiatto secondoPiatto = new SecondoPiatto( tipoPortata(rs), rs.getString("NOME"), rs.getDouble("PREZZO"), rs.getDouble("PESO_PIATTO"));
+                SecondoPiatto secondoPiatto = new SecondoPiatto( tipoPortata(rs), rs.getString("NOME_PIATTO"), rs.getDouble("PREZZO"), rs.getDouble("PESO_PIATTO"));
                 secondoPiatto.setId(rs.getInt("ID"));
                 secondiPiatti.add(secondoPiatto);
             }
@@ -52,7 +52,7 @@ public class SecondoPiattoDAO implements  PortataDAO<SecondoPiatto>{
     public void inserisci(SecondoPiatto secondoPiatto){
 
         try (Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-             PreparedStatement stmt = conn.prepareStatement("INSERT INTO secondopiatto (TIPO_MENU, NOME, PREZZO, PESO_PIATTO) VALUES (?, ?, ?, ?)")) {
+             PreparedStatement stmt = conn.prepareStatement("INSERT INTO secondopiatto (TIPO_MENU, NOME_PIATTO, PREZZO, PESO_PIATTO) VALUES (?, ?, ?, ?)")) {
             stmt.setString(1, secondoPiatto.getTipoEnum().toString());
             stmt.setString(2, secondoPiatto.getNome());
             stmt.setDouble(3, secondoPiatto.getPrezzo());
@@ -68,7 +68,7 @@ public class SecondoPiattoDAO implements  PortataDAO<SecondoPiatto>{
     public void aggiorna(SecondoPiatto secondoPiatto) {
 
         try (Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-             PreparedStatement stmt = conn.prepareStatement("UPDATE secondopiatto SET NOME = ?, PREZZO = ?, PESO_PIATTO = ? WHERE ID = ?")) {
+             PreparedStatement stmt = conn.prepareStatement("UPDATE secondopiatto SET NOME_PIATTO = ?, PREZZO = ?, PESO_PIATTO = ? WHERE ID = ?")) {
             stmt.setString(1, secondoPiatto.getNome());
             stmt.setDouble(2, secondoPiatto.getPrezzo());
             stmt.setDouble(3, secondoPiatto.getPesoPiatto());

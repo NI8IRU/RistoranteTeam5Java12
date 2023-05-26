@@ -1,7 +1,7 @@
 package portate;
 
-import enumertion.OrdinatoreEnum;
-import enumertion.TipoEnum;
+import enumeration.OrdinatoreEnum;
+import enumeration.TipoEnum;
 
 public class Bevanda extends Portata {
     private Double percentAlcol;
