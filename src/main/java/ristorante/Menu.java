@@ -100,7 +100,7 @@ public class Menu {
 
         System.out.println(tipoEnum.getColoreTipo().getAnsiCode());
         System.out.println(ColorEnum.NERO.getAnsiCode());
-        System.out.println(portate.get(0).getTipoEnum().getDescrizione() + "\n");
+        System.out.println(portate.get(0).getTipoEnum().getDescrizione() + ", prezzo totale: " + calculatePrice() + "€ \n");
         System.out.println("\n PRIMO \n");
         portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE).forEach(Portata::printPortata);
         System.out.println("\n SECONDO \n");
