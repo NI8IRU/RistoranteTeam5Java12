@@ -11,7 +11,7 @@ import java.util.List;
 public class Menu {
     private String nome;
 
-    private TipoEnum tipoEnum;
+    private final TipoEnum tipoEnum;
     private final List<Portata> portate;
 
     public Menu(String nome, TipoEnum tipoEnum) {
@@ -76,25 +76,6 @@ public class Menu {
         }
         return (double) Math.round(prezzo * 100) / 100;
     }
-
-
-    //Regolarizzata la funzione printMenu, rimane solo da abbellire la formattazione del testo
-//    public void printMenu() {
-//
-//        System.out.println(portate.get(0).getTipoEnum().getDescrizione() + "\n");
-//        System.out.println("\n PRIMI \n");
-//        portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE).forEach(Portata::printPortata);
-//        System.out.println("\n SECONDI \n");
-//        portate.stream().filter(secondo -> secondo.getOrdinatore() == OrdinatoreEnum.SECONDA_POSIZIONE).forEach(Portata::printPortata);
-//        System.out.println("\n DOLCE \n");
-//        portate.stream().filter(dolce -> dolce.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE).forEach(Portata::printPortata);
-//        System.out.println("\n BEVANDE \n");
-//        portate.stream().filter(bevanda -> bevanda.getOrdinatore() == OrdinatoreEnum.QUARTA_POSIZIONE).forEach(Portata::printPortata);
-//    }
-
-
-    //Overload della funzione printMenu
-    //Questo metodo stampa i menù colorati - !
 
     public void printMenu() {
 

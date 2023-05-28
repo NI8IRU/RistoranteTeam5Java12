@@ -5,9 +5,6 @@ import enumeration.TipoEnum;
 
     public class SecondoPiatto extends Portata {
 
-        /**
-         * pesoPiatto farà riferimento alla grammatura dei piatti
-         */
         private Double pesoPiatto;
 
         public SecondoPiatto(TipoEnum tipoEnum, String nome, Double prezzo, Double pesoPiatto) {
@@ -24,10 +21,6 @@ import enumeration.TipoEnum;
             this.pesoPiatto = pesoPiatto;
         }
 
-        /**
-         * Override della funzione ereditata
-         * dalla classe padre 'Portata'
-         */
         @Override
         public void printPortata() {
 

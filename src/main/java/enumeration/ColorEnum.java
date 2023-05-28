@@ -2,10 +2,6 @@ package enumeration;
 
 public enum ColorEnum {
 
-   /*
-    Enumerati per la personalizzazione estetica del menù
-     */
-
     RESET("\033[0m", "Interrompe il colore delle stringhe "),
     BLU("\u001B[34m", "Colora i caratteri di blu"),
     CIANO("\u001B[36m", "Colora i caratteri di ciano"),

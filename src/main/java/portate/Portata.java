@@ -36,7 +36,7 @@ public abstract class Portata {
 
     public OrdinatoreEnum getOrdinatore(){
         return ordinatore;
-    };
+    }
 
     public TipoEnum getTipoEnum() {
         return tipoEnum;

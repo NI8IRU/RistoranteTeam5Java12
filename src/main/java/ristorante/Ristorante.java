@@ -66,7 +66,6 @@ public class Ristorante {
         this.menus.remove(menu);
     }
 
-    //Corretta la funzione printOrdinazione, adesso stampa tutti i menù nella lista attraverso un ciclo for
     public void printMenuTipoScelto(TipoEnum tipoEnum) {
         System.out.println(getNome() + " " + getStelleRistorante().getVisual() + "\n"
                 + getStelleRistorante().getDescrizione());
