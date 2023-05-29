@@ -2,7 +2,6 @@
 package enumeration;
 
 /**
- * Creazione: 26/05/2023
  * Enum che verrà usato per definire il tipo
  * della portata e/o menù, ogni tipo presenta una descrizione e un
  * colore del background particolare
@@ -21,8 +20,8 @@ public enum TipoEnum {
     /**
      * @param nome        nome del tipo della menù
      * @param descrizione descrizione del tipo di menù
-     * @param coloreTipo  colore del tipo del menù, il cui ansicode è presente nella classe
-     *                    'ColorEnum'
+     * @param coloreTipo  colore del tipo del menù, il cui codice ANSI è presente
+     *                    nella classe 'ColorEnum'
      */
     TipoEnum(String nome, String descrizione, ColorEnum coloreTipo) {
         this.nome = nome;
@@ -32,7 +31,6 @@ public enum TipoEnum {
     }
 
     /**
-     *
      * @return il nome del tipo
      */
     public String getNome() {
@@ -40,7 +38,6 @@ public enum TipoEnum {
     }
 
     /**
-     *
      * @return la descrizione del tipo
      */
     public String getDescrizione() {
@@ -48,7 +45,6 @@ public enum TipoEnum {
     }
 
     /**
-     *
      * @return il colore del tipo
      */
     public ColorEnum getColoreTipo() {
