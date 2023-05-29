@@ -57,7 +57,7 @@ public abstract class Portata {
     /**
      * Setter per il nome della portata, accetta solo stringhe
      *
-     * @param nome
+     * @param nome nome della portata
      */
     public void setNome(String nome) {
         this.nome = nome;

@@ -45,7 +45,7 @@ public class Dolce extends Portata {
     }
 
     /**
-     * @Override della funzione ereditata
+     * Override della funzione ereditata
      * dalla classe padre 'Portata', in questo modo stamperà anche
      * la % di zuccheri della portata
      */
