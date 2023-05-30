@@ -12,6 +12,7 @@ import java.util.List;
  * La classe Menu rappresenta un menu di un ristorante e contiene diversi metodi per gestire il menu.
  */
 public class Menu {
+    private int id;
     private String nome;
     private final TipoEnum tipoEnum;
     private final List<Portata> portate;
@@ -44,6 +45,24 @@ public class Menu {
      */
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    /**
+     * Ritorna l'id del menù
+     *
+     * @return L'id del menù
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Imposta il nome del menu.
+     *
+     * @param id L'id del menu da impostare.
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
