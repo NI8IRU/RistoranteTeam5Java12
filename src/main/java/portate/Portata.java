@@ -5,7 +5,7 @@ import enumeration.OrdinatoreEnum;
 import enumeration.TipoEnum;
 
 /**
- * Creazione: 17/04/2023
+ *
  * Classe astratta che presenta le essenziali particolarità di una portata,
  * verrà usata per creare delle classi figlie che estenderanno i suoi metodi
  * per poi modificarli
@@ -113,7 +113,7 @@ public abstract class Portata {
     }
 
     /**
-     * Stampa classisa della portata che verrà modificata in ogni classe figlia
+     * Stampa classica della portata che verrà modificata in ogni classe figlia
      */
     public void printPortata() {
         System.out.println("  " + nome + ": " + prezzo + "€");

@@ -4,7 +4,7 @@ import enumeration.OrdinatoreEnum;
 import enumeration.TipoEnum;
 
 /**
- * Creazione: 24/03/2023
+ *
  * Classe figlia di 'Portata', serve per
  * aggiungere eventuali bevande al menù
  */

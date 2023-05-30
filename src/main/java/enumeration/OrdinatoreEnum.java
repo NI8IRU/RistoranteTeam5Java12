@@ -1,7 +1,6 @@
 package enumeration;
 
 /**
- * Creazione: 01/05/2023
  * Enum per l'ordinatore,
  * serve per poter ordinare le portate sul menù,
  * il valore verrà assegnato a ogni classe figlia di 'Portata' nel proprio 'super'
@@ -17,7 +16,7 @@ public enum OrdinatoreEnum {
 
     /**
      * field privato e finale -
-     * serve per identificare la poszione sul menù di ogni portata
+     * serve per identificare la posizione sul menù di ogni portata
      */
     private final Integer posizionePortataSulMenu;
 

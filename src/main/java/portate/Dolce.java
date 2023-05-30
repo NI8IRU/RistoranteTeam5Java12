@@ -4,7 +4,6 @@ import enumeration.OrdinatoreEnum;
 import enumeration.TipoEnum;
 
 /**
- * Creazione: 22/03/2023
  * Classe figlia di 'Portata', serve per
  * aggiungere eventuali dolci al menù
  */
@@ -17,9 +16,8 @@ public class Dolce extends Portata {
     private Double perZuccheri;
 
     /**
-     *
-     * @param nome nome del dolce
-     * @param prezzo prezzo del dolce
+     * @param nome        nome del dolce
+     * @param prezzo      prezzo del dolce
      * @param perZuccheri la % di zuccheri presenti
      */
     public Dolce(String nome, Double prezzo, Double perZuccheri) {
@@ -31,6 +29,7 @@ public class Dolce extends Portata {
 
     /**
      * Setter per la % di zuccheri, accetta solo double
+     *
      * @param perZuccheri % di zuccheri
      */
     public void setPerZuccheri(Double perZuccheri) {
@@ -45,7 +44,7 @@ public class Dolce extends Portata {
     }
 
     /**
-     * Override della funzione ereditata
+     * @Override della funzione ereditata
      * dalla classe padre 'Portata', in questo modo stamperà anche
      * la % di zuccheri della portata
      */
