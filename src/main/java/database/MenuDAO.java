@@ -1,23 +1,26 @@
 package database;
 
 import enumeration.TipoEnum;
-import portate.Bevanda;
-import portate.PrimoPiatto;
 import ristorante.Menu;
-
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * La classe MenuDAO gestisce le operazioni di accesso al database per gli oggetti di tipo Menu.
+ */
 public class MenuDAO {
     private static final String URL = "jdbc:mysql://localhost:3306/portate";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "password";
 
-    PrimoPiattoDAO primoPiattoDAO;
-    SecondoPiattoDAO secondoPiattoDAO;
-    DolceDAO dolceDAO;
-    BevandaDAO bevandaDAO;
+    private final PrimoPiattoDAO primoPiattoDAO;
+    private final SecondoPiattoDAO secondoPiattoDAO;
+    private final DolceDAO dolceDAO;
+    private final BevandaDAO bevandaDAO;
 
+    /**
+     * Costruttore della classe MenuDAO che inizializza le istanze delle classi DAO per le diverse tipologie di portate.
+     */
     public MenuDAO() {
         primoPiattoDAO = new PrimoPiattoDAO();
         secondoPiattoDAO = new SecondoPiattoDAO();
@@ -25,6 +28,11 @@ public class MenuDAO {
         bevandaDAO = new BevandaDAO();
     }
 
+    /**
+     * Restituisce tutti i menu presenti nel database.
+     *
+     * @return un ArrayList contenente tutti gli oggetti Menu presenti nel database
+     */
     public ArrayList<Menu> allMenus() {
         ArrayList<Menu> menus = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -46,11 +54,18 @@ public class MenuDAO {
         return menus;
     }
 
-    private TipoEnum tipoMenu (ResultSet rs) throws SQLException {
+    /**
+     * Restituisce il tipo di menu a partire dal ResultSet.
+     *
+     * @param rs il ResultSet contenente i dati del menu
+     * @return il tipo di menu corrispondente
+     * @throws SQLException se si verifica un errore durante l'accesso ai dati nel ResultSet
+     */
+    private TipoEnum tipoMenu(ResultSet rs) throws SQLException {
         return switch (rs.getString("TIPO_MENU")) {
-            case ("Carnivoro") -> TipoEnum.CARNIVORO;
-            case ("Pesce") -> TipoEnum.PESCE;
-            case ("Vegetariano") -> TipoEnum.VEGETARIANO;
+            case "Carnivoro" -> TipoEnum.CARNIVORO;
+            case "Pesce" -> TipoEnum.PESCE;
+            case "Vegetariano" -> TipoEnum.VEGETARIANO;
             default -> TipoEnum.ALL;
         };
     }
