@@ -1,23 +1,36 @@
 package portate;
 
 
-import enumertion.OrdinatoreEnum;
-import enumertion.TipoEnum;
+import enumeration.OrdinatoreEnum;
+import enumeration.TipoEnum;
 
-
+/**
+ *
+ * Classe figlia di 'Portata', serve per
+ * aggiungere eventuali primi piatti al menù
+ */
 public class PrimoPiatto extends Portata {
+    /**
+     * Rappresenta i kcal presenti in un primo piatto
+     */
     private Integer kcalPerEtto;
 
 
-    public PrimoPiatto(String nome, Double prezzo, Integer kcalPerEtto, TipoEnum tipoEnum) {
-        //messo il valore dell'ordinatore nel super!
+    /**
+     * @param tipoEnum    tipo della portata (se è carnivora, vegetariana o di tipo pesce)
+     * @param nome        nome del primo piatto
+     * @param prezzo      prezzo del primo piatto
+     * @param kcalPerEtto i kcal presenti
+     */
+    public PrimoPiatto(TipoEnum tipoEnum, String nome, Double prezzo, Integer kcalPerEtto) {
+
         super(nome, prezzo, tipoEnum, OrdinatoreEnum.PRIMA_POSIZIONE);
         this.kcalPerEtto = kcalPerEtto;
 
     }
 
     /**
-     * @return kcalPerEtto
+     * @return i kcal della portata
      */
 
     public Integer getKcalPerEtto() {
@@ -26,7 +39,9 @@ public class PrimoPiatto extends Portata {
 
 
     /**
-     * @param kcalPerEtto
+     * Setter per i kcal del primo piatto, accetta solo numeri interi
+     *
+     * @param kcalPerEtto kcal della portata
      */
     public void setKcalPerEtto(Integer kcalPerEtto) {
         this.kcalPerEtto = kcalPerEtto;
@@ -34,8 +49,9 @@ public class PrimoPiatto extends Portata {
 
 
     /**
-     * Override della funzione ereditata
-     * dalla classe padre 'Portata'
+     * @Override della funzione ereditata
+     * dalla classe padre 'Portata', in questo modo stamperà anche
+     * i kcal della portata
      */
     @Override
     public void printPortata() {
@@ -43,3 +59,4 @@ public class PrimoPiatto extends Portata {
                 + " \n  " + kcalPerEtto + "kcal (presenti per etto); \n");
     }
 }
+

@@ -1,33 +1,76 @@
-import enumertion.ColorEnum;
-import enumertion.OrdinatoreEnum;
-import enumertion.TipoEnum;
+package ristorante;
+
+import enumeration.ColorEnum;
+import enumeration.OrdinatoreEnum;
+import enumeration.TipoEnum;
 import portate.Portata;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * La classe Menu rappresenta un menu di un ristorante e contiene diversi metodi per gestire il menu.
+ */
 public class Menu {
+    private int id;
     private String nome;
-
-    private TipoEnum tipoEnum;
+    private final TipoEnum tipoEnum;
     private final List<Portata> portate;
 
+    /**
+     * Costruttore per la classe Menu.
+     *
+     * @param nome     Il nome del menu.
+     * @param tipoEnum Il tipo di menu.
+     */
     public Menu(String nome, TipoEnum tipoEnum) {
         this.nome = nome;
         this.tipoEnum = tipoEnum;
         this.portate = new ArrayList<>();
     }
 
+    /**
+     * Restituisce il nome del menu.
+     *
+     * @return Il nome del menu.
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     * Imposta il nome del menu.
+     *
+     * @param nome Il nome del menu da impostare.
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public void addPortata(Portata portata) {
+    /**
+     * Ritorna l'id del menù
+     *
+     * @return L'id del menù
+     */
+    public int getId() {
+        return id;
+    }
 
+    /**
+     * Imposta il nome del menu.
+     *
+     * @param id L'id del menu da impostare.
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    /**
+     * Aggiunge una portata al menu.
+     *
+     * @param portata La portata da aggiungere.
+     */
+    public void addPortata(Portata portata) {
         if (portata.getTipoEnum() == this.tipoEnum || portata.getTipoEnum() == TipoEnum.ALL) {
             portate.add(portata);
         }
@@ -44,12 +87,15 @@ public class Menu {
         });
     }
 
+    /**
+     * Rimuove una portata dal menu.
+     *
+     * @param portata La portata da rimuovere.
+     */
     public void removePortata(Portata portata) {
-
         if (portata.getTipoEnum() == this.tipoEnum || portata.getTipoEnum() == TipoEnum.ALL) {
             portate.remove(portata);
         }
-
 
         portate.sort((u1, u2) -> {
             if (u1.getPrezzo().equals(u2.getPrezzo()))
@@ -63,10 +109,20 @@ public class Menu {
         });
     }
 
+    /**
+     * Restituisce il tipo di menu.
+     *
+     * @return Il tipo di menu.
+     */
     public TipoEnum getTipo() {
         return portate.get(0).getTipoEnum();
     }
 
+    /**
+     * Calcola il prezzo totale del menu.
+     *
+     * @return Il prezzo totale del menu.
+     */
     public Double calculatePrice() {
         Double prezzo = 0.0;
         for (Portata portata : portate) {
@@ -75,33 +131,16 @@ public class Menu {
         return (double) Math.round(prezzo * 100) / 100;
     }
 
-
-    //Regolarizzata la funzione printMenu, rimane solo da abbellire la formattazione del testo
+    /**
+     * Stampa il menu.
+     */
     public void printMenu() {
-
-        System.out.println(portate.get(0).getTipoEnum().getDescrizione() + "\n");
-        System.out.println("\n PRIMI \n");
-        portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE).forEach(Portata::printPortata);
-        System.out.println("\n SECONDI \n");
-        portate.stream().filter(secondo -> secondo.getOrdinatore() == OrdinatoreEnum.SECONDA_POSIZIONE).forEach(Portata::printPortata);
-        System.out.println("\n DOLCE \n");
-        portate.stream().filter(dolce -> dolce.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE).forEach(Portata::printPortata);
-        System.out.println("\n BEVANDE \n");
-        portate.stream().filter(bevanda -> bevanda.getOrdinatore() == OrdinatoreEnum.QUARTA_POSIZIONE).forEach(Portata::printPortata);
-    }
-
-
-    //Overload della funzione printMenu
-    //Questo metodo stampa i menù colorati - !
-
-    public void printMenu(ColorEnum colorEnum) {
-
-        System.out.println(colorEnum.getAnsiCode());
+        System.out.println(tipoEnum.getColoreTipo().getAnsiCode());
         System.out.println(ColorEnum.NERO.getAnsiCode());
-        System.out.println(portate.get(0).getTipoEnum().getDescrizione() + "\n");
-        System.out.println("\n PRIMI \n");
+        System.out.println(portate.get(0).getTipoEnum().getDescrizione() + ", prezzo totale: " + calculatePrice() + "€ \n");
+        System.out.println("\n PRIMO \n");
         portate.stream().filter(primo -> primo.getOrdinatore() == OrdinatoreEnum.PRIMA_POSIZIONE).forEach(Portata::printPortata);
-        System.out.println("\n SECONDI \n");
+        System.out.println("\n SECONDO \n");
         portate.stream().filter(secondo -> secondo.getOrdinatore() == OrdinatoreEnum.SECONDA_POSIZIONE).forEach(Portata::printPortata);
         System.out.println("\n DOLCE \n");
         portate.stream().filter(dolce -> dolce.getOrdinatore() == OrdinatoreEnum.TERZA_POSIZIONE).forEach(Portata::printPortata);

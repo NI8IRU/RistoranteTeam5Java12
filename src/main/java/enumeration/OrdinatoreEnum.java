@@ -1,7 +1,11 @@
-package enumertion;
+package enumeration;
 
-   //creato un enum per l'ordinatore,
-   // così da poter ordinare le portate sul menù
+/**
+ * Enum per l'ordinatore,
+ * serve per poter ordinare le portate sul menù,
+ * il valore verrà assegnato a ogni classe figlia di 'Portata' nel proprio 'super'
+ */
+
 public enum OrdinatoreEnum {
 
     PRIMA_POSIZIONE(1),
@@ -12,22 +16,25 @@ public enum OrdinatoreEnum {
 
     /**
      * field privato e finale -
-     * reso un Integer!
+     * serve per identificare la posizione sul menù di ogni portata
      */
     private final Integer posizionePortataSulMenu;
 
     /**
-     messo il field di prima dentro il costruttore
+     * Costruttore che prende come parametro un numero intero
+     *
+     * @param posizionePortataSulMenu definisce la posizione delle portate
      */
     OrdinatoreEnum(Integer posizionePortataSulMenu) {
         this.posizionePortataSulMenu = posizionePortataSulMenu;
     }
 
     /**
-     getter pubblico così che lo si può usare in tutte le classi
+     * @return la posizione delle portate sul menù
      */
     public int getPosizionePortataSulMenu() {
         return posizionePortataSulMenu;
     }
 
 }
+
