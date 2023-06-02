@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * La classe SecondoPiattoDAO implementa l'interfaccia PortataDAO per gestire le operazioni di accesso al database
  * per gli oggetti di tipo SecondoPiatto.
  */
-public class SecondoPiattoDAO implements PortataDAO<SecondoPiatto> {
+public class SecondoPiattoDAO implements InterfacciaDAO<SecondoPiatto> {
 
     private static final String URL = "jdbc:mysql://localhost:3306/portate";
     private static final String USERNAME = "root";

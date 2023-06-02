@@ -15,7 +15,7 @@ public class Main {
                 "Milano", 3, 20159, "Milano", ""));
 
         MenuDAO menuDAO = new MenuDAO();
-        ArrayList<Menu> menus = menuDAO.allMenus();
+        ArrayList<Menu> menus = menuDAO.findAll();
         for (Menu menu : menus) {
             ristorante.addMenu(menu);
         }

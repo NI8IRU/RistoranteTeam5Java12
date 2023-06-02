@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * La classe DolceDAO implementa l'interfaccia PortataDAO per gestire le operazioni di accesso al database
  * per gli oggetti di tipo Dolce.
  */
-public class DolceDAO implements PortataDAO<Dolce> {
+public class DolceDAO implements InterfacciaDAO<Dolce> {
     private static final String URL = "jdbc:mysql://localhost:3306/portate";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "password";

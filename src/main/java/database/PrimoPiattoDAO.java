@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * La classe PrimoPiattoDAO implementa l'interfaccia PortataDAO per gestire le operazioni di accesso al database
  * per gli oggetti di tipo PrimoPiatto.
  */
-public class PrimoPiattoDAO implements PortataDAO<PrimoPiatto> {
+public class PrimoPiattoDAO implements InterfacciaDAO<PrimoPiatto> {
 
     private static final String URL = "jdbc:mysql://localhost:3306/portate";
     private static final String USERNAME = "root";

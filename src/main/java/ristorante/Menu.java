@@ -57,6 +57,14 @@ public class Menu {
     }
 
     /**
+     *
+     * @return La lista delle portate
+     */
+    public List<Portata> getPortate() {
+        return portate;
+    }
+
+    /**
      * Imposta il nome del menu.
      *
      * @param id L'id del menu da impostare.
